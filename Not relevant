@@ -1,0 +1,51 @@
+% --- NOT RELEVANT ONLY NOTES
+
+Damit wird diese spezifische wissenschaftliche Lücke gefüllt und zeigt auf, dass aktuelle SimRacing-Lösungen für ein Fahrschulmodell nicht wirtschaftlich sinnvoll sind.
+
+Engineering,"Konzept und Design. Sie entwerfen, wie man die kommerziellen Teile (Aktuator, Controller) so an die Pedale anbringt, dass sie die nötigen Kräfte liefern. Ihre Arbeit: Die Auswahl der Komponenten und der Aufbau.","Kosteneffiziente, funktionierende Hardware (ABS-Pedal und Kupplungspedal)."
+
+Mathematik,Das Fahrgefühl definieren. Sie übersetzen die physikalischen Effekte (z.B. die Kraft-Weg-Kurve der Kupplung; die Frequenz des ABS-Rattelns) in Formeln und Regler. Ihre Arbeit: Die Steuerung der Aktuatoren (z.B. PID-Regelung).,Physikalische Validität des simulierten Gefühls.
+
+Software,Die Kommunikation herstellen. Sie müssen die Sim-Daten (z.B. über SimHub oder eine eigene Schnittstelle) abgreifen und diese an Ihre mathematischen Regler senden. Ihre Arbeit: Die Brücke zwischen Simulator und Aktuator bauen.,Echtzeit-Feedback und Ansteuerung des Systems.
+
+Psychologie,"Den Erfolg beweisen. Sie entwickeln eine Mini-Studie, um zu zeigen, dass Probanden mit Ihrem System tatsächlich weniger Fehler beim Schleifpunkt machen oder schneller auf ABS reagieren. Ihre Arbeit: Die Validierung des didaktischen Mehrwerts.",Wissenschaftlicher Beweis für den Wert des Systems.
+
+BIS HIERHIN ALLES WEITERE SIND NOTIZEN ODER KI ODER ALTE TEXTE DIE NICHT GANZ GEPASST HABEN.
+Mit Blick auf diese kritischen Fahrmanövern 
+
+Seither gibt es wenig ... durch diese taktile Wahrnemung 
+
+
+Ziel:  -Veigel bietet ein solches Modell an, welches bereits in Richtung der Vollständigkeit wandert und stetig an den offenen Stellen weiterentwickelt wird. - 
+Damit dies erreicht wird sollen die hochrelevanten Fahrschulmanöver: "Schleifpunkt finden" und "ABS-Kontrolle", durch Force-Feedback-Konzepte technisch und psychologisch bewiesen werden. Da keine empirischen Studien existieren, wird der Fokus meiner Arbeit die Realisierung und Evaluation solcher Systeme sein.
+
+Damit diese Hypothese Da dies bisher unbewiesen bzw. unbetrachtet verweilt, soll eine bewiesen werden kann 
+
+Die haptischen Systeme müssen eine qualitative Zugehörigkeit zu dem realen Autofahrgefühl   
+
+Damit diese Erfahrung ein realistisches und authentisches Fahrgefühl ist, wird ein*e Fahrschüler*in in eine virtuelle Umgebung, durch ein "Virtual Reality Headset", gebracht. Außerdem bekommt man konstantes haptisches Feedback durch die haptischen Systeme in den verschiedenen Hardware-Komponenten des Simulators. Ein Sitz sollte Aufschläge in der Simulation wahrnehmen und Feedback geben. So soll auch ein Bremspedal und ein Kupplungspedal ein solches Force-Feedback-System haben, dass bei ABS-Pulsationen und Kupplungschleifpunkt physikalische übereinstimmungen sich bilden. Somit kann ein Fahrschüler diese beiden Fälle genau wahrnehmen und im Simulator üben.
+
+Der Kontext/Mangel: Aktuelle Fahrschulsimulatoren im Mid-Cost-Segment vernachlässigen die aktive haptische Rückmeldung der Fußpedalerie.
+
+Die Lücke (Technisch): Es fehlt ein modular adaptierbares und kosteneffizientes Force-Feedback-Konzept, das spezifisch ABS-Pulsationen und den Kupplungsschleifpunkt physikalisch valide abbilden kann.
+
+Die Methode (Engineering/Mathematik): Dieses Konzept erfordert die Entwicklung eines geeigneten Regelungsalgorithmus und einer Software-Schnittstelle (z.B. basierend auf SimHub oder eigenen Datenprotokollen) zur Umsetzung der Kraft-Weg-Modelle.
+
+Die Lücke (Psychologisch): Darüber hinaus ist der tatsächliche didaktische Mehrwert dieser spezifischen haptischen Informationen auf den Lerntransfer und die Fehlerreduktion bei Fahrschüler*innen empirisch unzureichend belegt.
+
+Die Zielsetzung: Ziel dieser Arbeit ist die Entwicklung und Validierung eines solchen Systems.
+
+Technische Lösung für psychologische Frage gesucht.
+Psychologische Frage: Gibt es besseres Fahrgefühl und erhöhten Lerntransfer durch ABS und Schleifpunkt Force-Feedback Haptiksystem?
+Technische Lösung: Module für Bremspedal und Kupplungspedal einbauen. Module korrekt einstellen. Module und Simulation Schnittpunkt erstellen. Studie. Auswertung.
+
+Es fehlt eine Force-Feedback Lösung für die Brems- und Kopplungspedalerie. Ein kosteneffizientes, aktives Haptisches System soll umgesetzt werden, um ABS und Schleifpunkt für Fahrschüler in der Simulation greifbar und spürbar zu machen, damit der Lerntransfer beim Fahren in einem Auto mit solchen Eigenschaften bereits in der Simulation umsetzbar ist. 
+
+Veigel bietet einen Simulator für Fahrschulen an, welcher das Lehren vereinfacht und sicherer macht. Der Simulator besteht aus VR Simulationssoftware und Haptik Setup, dazu gehört Sitz, Lenkrad und nun auch die Pedale. Die Pedale sollen spezifisch für Verbrenner Haptikmodule nutzen, um den Fahrschülern das Gefühl für Schleifpunkt, Bremse und Beschleunigung zu geben. Somit soll eine Einführung in das Autofahren erleichtert werden. Dazu gehört das erlernen und üben zum Finden des Schleifpunktes.
+
+Haptik für Simulationen kann zu realistischen Erfahrungen führen. Eine realistischere Erfahrung wiederum kann zu einem angenehmerem Simulationserlebnis und erhöhtem Erlernen von Zuständen führen. In einer Fahrschulsimulation, mit VR Anbindung, Sitz, Lenkrad, Pedalerie und mehr, sollen Fahrschüler*innen Übungsstunden in einer sicheren aber gleichzeitig real-nahen Umgebung durchführen. Einige aktive Haptik ist bereits verbaut doch in den Pedalen gibt es noch kein aktives haptisches System.
+
+Ziel: Erkenntnisse für Schleifpunkt, Bremse und gegebenenfalls Gaspedal ziehen zu können im Vergleich zum jetzigen Stand. Gegebenenfalls Rückschlüsse zu Haptik-Verbesserungen erreicht zu haben.
+> Wenn ein Fahrschüler einen Simulator mit aktiver Haptik an den Pedalen nutzt, entwickelt er ein besseres Gefühl und Verständnis fürs Autofahren. Dadurch lernt er voraussichtlich schneller als der Durchschnitt der Schüler, die einen Simulator mit herkömmlichen Pedalen verwenden.
+
+- Schleifpunkt nur mit Elektronischer aktiv Haptik schwer umsetzbar bzw. wird nicht das gewünschte Ziel erreichen. Eine Möglichkeit ist die Auseinandersetzung mit einem hybriden Ansatz der bereits bei anderen SotA Pedalen umgesetzt wird. (Teuer, sehr speziell) - Aktuelle Umsetzung via Buttkicker
