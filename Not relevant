@@ -1,51 +1,294 @@
-% --- NOT RELEVANT ONLY NOTES
+\documentclass[12pt,toc=bib,toc=listof]{scrartcl}
 
-Damit wird diese spezifische wissenschaftliche Lücke gefüllt und zeigt auf, dass aktuelle SimRacing-Lösungen für ein Fahrschulmodell nicht wirtschaftlich sinnvoll sind.
+\usepackage[ngerman, english]{babel} 
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{setspace}
+\usepackage{geometry}
 
-Engineering,"Konzept und Design. Sie entwerfen, wie man die kommerziellen Teile (Aktuator, Controller) so an die Pedale anbringt, dass sie die nötigen Kräfte liefern. Ihre Arbeit: Die Auswahl der Komponenten und der Aufbau.","Kosteneffiziente, funktionierende Hardware (ABS-Pedal und Kupplungspedal)."
+\usepackage{hyperref}
+\hypersetup{
+  colorlinks=true
+  ,linkcolor=blue
+  ,citecolor=blue
+  ,filecolor=blue
+  ,urlcolor=blue
+}
 
-Mathematik,Das Fahrgefühl definieren. Sie übersetzen die physikalischen Effekte (z.B. die Kraft-Weg-Kurve der Kupplung; die Frequenz des ABS-Rattelns) in Formeln und Regler. Ihre Arbeit: Die Steuerung der Aktuatoren (z.B. PID-Regelung).,Physikalische Validität des simulierten Gefühls.
+% Fachbezogene Werte (müssen aktualisiert werden)
+\newcommand{\hhnsubject}{Software Engineering Bachelor}
+\newcommand{\hhnsubjectnum}{SPO 04}
+\newcommand{\hhnlecturer}{Ulrich Straus}
 
-Software,Die Kommunikation herstellen. Sie müssen die Sim-Daten (z.B. über SimHub oder eine eigene Schnittstelle) abgreifen und diese an Ihre mathematischen Regler senden. Ihre Arbeit: Die Brücke zwischen Simulator und Aktuator bauen.,Echtzeit-Feedback und Ansteuerung des Systems.
+% Vom Studierenden zu aendernde Werte
+\newcommand{\reprttopic}{THEMA}
+\newcommand{\reprtstudentname}{Collin Hoss}
+\newcommand{\reprtstudentid}{212848}
+\urldef{\reprtstudentmail}\url{choss@stud.hs-heilbronn.de}
 
-Psychologie,"Den Erfolg beweisen. Sie entwickeln eine Mini-Studie, um zu zeigen, dass Probanden mit Ihrem System tatsächlich weniger Fehler beim Schleifpunkt machen oder schneller auf ABS reagieren. Ihre Arbeit: Die Validierung des didaktischen Mehrwerts.",Wissenschaftlicher Beweis für den Wert des Systems.
+\usepackage{ifpdf}
+\ifpdf
+\usepackage[pdftex]{graphicx}
+\else
+\usepackage{graphicx}
+\fi
 
-BIS HIERHIN ALLES WEITERE SIND NOTIZEN ODER KI ODER ALTE TEXTE DIE NICHT GANZ GEPASST HABEN.
-Mit Blick auf diese kritischen Fahrmanövern 
+\usepackage[headsepline]{scrlayer-scrpage}
+\pagestyle{scrheadings}
+\clearpairofpagestyles
+\ihead{\hhnsubject: \reprttopic}
+\ohead{\pagemark}
 
-Seither gibt es wenig ... durch diese taktile Wahrnemung 
+\usepackage{enumitem}
+\setlist[enumerate, 1]{label=\arabic*.} 
+\setlist[enumerate, 2]{label=\theenumi\arabic*.}
+\setlist[enumerate, 3]{label=\theenumii\arabic*.}
+
+% --- Title
+\subject{{\hhnsubject{} (\hhnsubjectnum{})}}
+\title{\reprttopic}
+\author{\reprtstudentname\footnote{\reprtstudentid, \reprtstudentmail}}
+%% Datum nie auf einen festen Wert setzen
+\publishers{Eingereicht bei \hhnlecturer}
+% ---
+% ORCID code: https://orcid.org/0009-0004-2195-4521
+
+\begin{document}
+\renewcommand{\thefootnote}{}
+\selectlanguage{ngerman}
+\maketitle
+\newgeometry{left=30mm, top=25mm, right=15mm, bottom=25mm}
+\pagenumbering{arabic}
+% report (begin)
+
+\section{Einleitung und Problemstellung} % (fold)
+\label{sec:Einleitung und Problemstellung}
+
+Die zu erbringende Arbeit widmet sich der Implementierung eines funktionalen Prototyps. Der Prototyp wird ein Force-Feedback-System mit aktivem Force-Feedback an einem Kupplungspedal umfassen. Dazu wird ein vibro-taktiler Aktuator und ein entsprechendes Pedal genutzt. Im Rahmen der Arbeit wird ein Fahrschulsimulator mit Rig und Virtual Reality eingesetzt. Der Prototyp hat die Aufgabe die taktilen Wahrnehmung des Schleifpunkts mittels Vibrationen darzustellen. Das weitere Ziel besteht darin, dass die Fahrlehrer den Simulator mehr schätzen und die Fahrschüler das Anfahren sowie das Schalten effizienter am Simulator erlernen können.
+
+\subsection{Hintergrund}
+
+Mit dem Führerschein B197 kann der Besitzer Autos mit automatischer und manueller Schaltung fahren. Allerdings setzt dieser Führerschein eine erfolgreiche Absolvierung (Schaltkompetenz) von mindestens zehn Fahrstunden sowie einer 15-minütigen Testfahrt mit einem Fahrlehrer in einem Auto mit manueller Schaltung voraus \cite{adac_b197}.
+
+Gemäß den aktuellen Aufsätzen der geplanten ``Optimierten Fahrschulausbildung 2`` (OFSA2) besteht fortan die Möglichkeit die Schaltkompetenz vollständig auf einem Simulator zu erbringen \cite{ofsa2_sim}. Damit, soll unter anderem die hohe Durchfallquote und die hohen Kosten für Fahrschüler verringert werden \cite{FP_scheitern_AH} sowie dem Fahrlehrermangel entgegenwirkt werden \cite{moving_flm}.
+
+Eine Notwendigkeit für die Schaltkompetenz ist das Finden und Spüren des Schleifpunktes am Kupplungspedal beim Anfahren und Schalten der Gänge (Schleifpunktszenarien). Der Schleifpunkt wird durch Vibrationen und akustische Veränderungen signalisiert (letzteres wird in dieser Arbeit nicht thematisiert). Ein Fahrer muss den Schleifpunkt aktiv suchen, um den Motor nicht zu beschädigen oder abzuwürgen und erfolgreich anzufahren und zu schalten \cite{anfahren_w} \cite{anfahren_yt}. Demnach müssen Fahrschüler das Suchen üben. Somit soll der Simulator eine technische Lösung zum Üben für den Schleifpunkt haben, welche die Übungen im Auto ersetzen könnten.
+
+\subsection{Kupplungspedal mit aktivem Force-Feedback und vibro-taktilem Aktuator}
+
+Sogenannte "Active Pedals" [Simucube] bieten bereits eine weite Menge an Konfigurationsmöglichkeiten für Pedale, welche die haptische Wahrnehmung des Schleifpunktes (und mehr) greifbar machen wollen. Oft werden in solchen Pedalen leistungsstarke Servo-Motoren und vibro-taktile Aktuatorik verbaut \cite{simucube_pedals}. Der vibrotaktile Aktuator erzeugt Vibrationen die von Menschen über die taktile Wahrnehmung verspürt werden. [Quelle Buch 1] 
+
+Das genannte Force-Feedback-System sollte an einem Kupplungspedal installiert werden und sowohl an ein gewünschtes Simulationsauto als auch an den Fahrer konfigurierbar sein. Diese Implementierung des Schleifpunkts auf einem Simulator könnte zu einer Steigerung der Zufriedenheit (gerichtet auf den Simulator) sowohl bei Fahrlehrern als auch bei Fahrschülern bewirken. Damit sollte das Gesamtsystem eine für den Einsatz an Fahrschulen realitätsnahe Wahrnehmung des Schleifpunktes ermöglichen.
+
+Die technische und wirtschaftliche Herausforderung besteht darin, dass diese Pedale auf dem Markt kostspielig sind und für den Einsatz im Simracing konzipiert wurden, nicht jedoch für den Einsatz in Fahrschulsimulatoren. Die stehenden Pedale an Veigels Simulator haben kein aktives Force-Feedback und nutzen keine Form der vibrotaktilen Aktuatorik.
+
+Deshalb soll ein kosteneffizientes und möglichst modular adaptierbares Force-Feedback-System, mit Fokus auf dem vibrotaktilen Aktuator, eigenständig mithilfe von Tooling und unter Rückgriff auf DIY-Lösungen zu entwickeln. Das System muss in regelmäßigen Abständen validiert und anhand von Nutzerfeedbacks erweitert und/oder modifiziert werden. 
+\newline\newline
+Die Transformation der Telemetriedaten von der Fahrschulsimulation in Vibrationsmuster ist ein wesentlicher Aspekt der zu erbringenden Arbeit. Die effiziente Umsetzung ist von entscheidender Bedeutung für die Vibrationen, die vom Aktuator durchgeführt werden. Die Erzeugung haptischen Feedbacks für die Nutzer*innen zielt auf die Evaluation von Realismus und Wahrnehmungsgefühl ab. Außerdem ist eine Schnittstelle zur Konfiguration erforderlich. Die vorliegende Vorgehensweise umfasst die Gestaltung und Bestimmung des zu erbringenden funktionalen Prototyps.
+
+\ldots
+
+\section{Systemdarstellung}
+\label{sec:Systemdarstellung}
+
+\includegraphics[scale=0.322]{images/Systemdarstellung.PNG}
+\newline
+Echtzeittelemetriedaten werden aus der Fahrschulsimulation via API von Simhub empfangen und verarbeitet. Außerdem erkennt SimHub die Pedale und das Hardware-Interface zum Aktuator. Der Aktuator empfängt die gesendeten Vibrationsmuster und führt sie aus. Die Telemetriedaten werden über eine Telemetrie-Logik zu nützlichen Daten gemacht.
+
+\section{Methodik}
+
+Zur Strukturierung des Entwicklungsprozesses wird ein iteratives Vorgehensmodell gewählt. Diese Wahl erfolgt aufgrund der Notwendigkeit einer kontinuierlichen Validierung durch Nutzer-Feedback sowie der agilen Anpassungsfähigkeit des Prototyps. Insbesondere soll die finale Konfiguration der Komponenten nicht nur geplant, sondern auch iterativ mit verschiedenen Hardware-Zusammenstellungen experimentell verglichen werden. Die Möglichkeit der Modifikation von Hard- und Software ist essenziell für den Entwicklungsprozess.
+
+Die gewählte Struktur baut auf dem ``Rapid Prototyping`` auf, da es sich durch seine xxx auszeichnet [QUELLE]. Damit wird eine frühzeitige Funktions- und Wahrnehmungsvalidierung sowie ein geringes Risiko von Fehlentwicklungen gewährleistet.
+
+\subsection*{Rapid Prototyping Rahmen}
+
+Die gewählte Methodik des Rapid Prototyping wird für dieses Projekt in mindestens fünf und maximal sieben Zyklen durchgeführt. Zur Gewährleistung einer klaren Struktur, Messbarkeit und Datierung wird jeder Zyklus mithilfe der SMART Kriterien konzeptioniert. Die SMART Kriterien (Spezifisch, Messbar, Erreichbar, Relevant, Terminiert) garantieren präzise Zielstellung aller Zyklen \cite{SMART_wiki}. Für jeden Zyklus, nach dem Ersten, wird die jeweilige Zielstellung adaptiv in Abhängigkeit der Ergebnisse und Nutzer-Reviews des vorangegangenen Zyklus festgelegt. Vorher kann keine präzise Zielstellung erstellt werden.
+
+Alle Zyklen folgen ungeachtet ihrer jeweiligen Zielstellung den folgenden drei Phasen des Rapid Prototyping: 
+
+\begin{enumerate}
+    \item \textit{Refine \& Iterate:} Auf Basis der Resultate des vorherigen Zyklus wird in dieser Phase die SMART-Zielstellung definiert. Gleichzeitig werden Tickets, zur transparenten Aufteilung und Messung des Umfangs, in Form von User Stories erstellt. Darüber hinaus besteht die Möglichkeit, dass die Hardware neu festgelegt wird, nach einem Nutzvergleich. Im ersten Zyklus ist diese Phase für die Definition des Erstkonzepts zuständig, während in den Folgezyklen eine Erweiterung desselben erfolgt.
+    \item \textit{Prototyping:} Die Tickets und das Konzept werden in dieser Phase abgearbeitet. Diese Phase endet mit dem Erreichen der Zielstellung, entweder sind alle Tickets abgearbeitet oder die zeitliche Beschränkung ist erreicht.
+    \item \textit{Review:} Im Rahmen von Nutzertests erfolgt die Ermittlung des Wahrnehmungsgefühls des Schleifpunktes beim Schalten, Halten und Anfahren mittels einfacher Fragebögen und Anweisungen. Das Review des Prototypen erfolgt am Simulator und die Fragebögen werden für jeden Zyklus vor dem Review angepasst. Mit der Dokumentation der Ergebnisse endet der Zyklus.
+\end{enumerate}
+
+\subsection*{Entscheidungsfindung der Systemkomponenten}
+
+Die initiale Auswahl der Komponenten für den ersten Zyklus basierte primär auf Verfügbarkeit und Kostenreduktion. Da der gewählte ``Voice Coil Actuator`` (VCA) haptisches Feedback erzeugen kann \cite{grewus_haptic}, erfüllt er als Test-Aktuator seinen Zweck. Allerdings wird für weitere Entscheidungen eine systematische Pro-/Contra-Liste verwendet. Kriterien sind dabei haptische Faktoren (wie maximale/minimale Amplitude, Frequenzgang und Latenz) sowie ökonomische Faktoren (wie Kosten und Integrationsaufwand). Somit ist eine objektive und nachvollziehbare Auswahl der Systemkomponenten gegeben.
+\newline\newline
+In Bezug auf die Software wird SimHub als zentrale Schnittstelle fungieren. Die Wahl beruht auf der breiten Kompatibilität mit Hardware und Simulationssoftware sowie den umfassenden Konfigurations- und Dokumentationsmöglichkeiten, die für die Entwicklung der Telemetrie-Logik notwendig sind \cite{simhub_doc}. Assetto Corsa oder BeamNG werden als initiale Testumgebung genutzt, da beide die notwendigen Telemetriedaten bereitstellen, dies kann den Webseiten der Spiele entnommen werden \cite{ac_telemetry} \cite{beamng_doc_prot}.
+
+\subsection*{Thematische Struktur der Zyklen}
+
+Die gesamte Durchführung erfolgt in fünf bis sieben aufeinander aufbauenden Iterationen in Form von Zyklen. Jeder Zyklus hat einen thematisch anderen Fokus. Dieser Fokus ist noch nicht in Stein gemeißelt, da es zu Änderungen in der Entwicklung kommen kann.
+
+\subsubsection*{Zyklus Eins: Hardware Proof of Concept}
+
+Im ersten Zyklus erfolgt die initiale Evaluierung der Systembestandteil mit den Werkseinstellungen. Währenddessen werden Einblicke in die vibro-taktile Aktuatorik (speziell die VCA-Technologie) und eine Übersicht über die Konfigurations- und Schnittstellenmöglichkeiten der SimHub-Software gewonnen.
+\newline\newline
+\textbf{Zielstellung:} Das Ziel ist es den VCA erfolgreich über die SimHub-Telemetrie für den Schleifpunkt am Kupplungspedal mithilfe des ``ShakeIt Bass Shaker Plugins`` anzusteuern und synchron zur Testumgebung analog zu konfigurieren. Innerhalb von sechs Tagen soll ein definiertes Vibrationsmuster am Pedal erzeugt. Anschließend erfolgt eine Evaluation, von nicht-spürbar bis zu-stark, von jeweils der Wahrnehmung der Vibrationen sowie der Annäherung an das authentische Schleifpunktvibrationsgefühl durch vier bis acht Testpersonen.
+
+\subsubsection*{Zyklus Zwei: System-Integration}
+
+Im zweiten Zyklus liegt der Fokus auf der Integration der eigenen Simulationsapplikation in den Prototyp. Im Rahmen dessen erfolgt die Recherche und Entwicklung der erforderlichen Schnittstellen. Es wird eine zentrale Schnittstelle etabliert, um empfangene Metriken der Simulationsanwendung mit der Pedal- und Aktuator-Hardware zu verknüpfen.
+\newline\newline
+Außerdem muss eine API zur Übertragung der Telemetriedaten aus der Simulationsanwendung programmiert werden. Mit dieser Übertragung und einer Telemetrie-Logik, die dazu dient, alle notwendigen Metriken zu sammeln und zu verarbeiten, wird das Erzeugen von Vibrationsmuster möglich.
+
+Eine nahe Übereinstimmung der Ergebnisse der Review mit den Ergebnissen des vorherigen Zyklus ist gewünscht.
+
+\subsubsection*{Zyklus Drei bis Ende: }
+
+Im dritten Zyklus sollen Messungen an Kupplungen durchgeführt werden und daraus Vibrationsmuster gebildet werden. Diese werden dann für die Review-Phase verwendet und einzeln ausgewertet.
+\newline\newline
+Im vierten Zyklus sollen dann aus den Ergebnissen Optimierungen durchgeführt werden. Dieser Zyklus kann auch Zyklus fünf und sechs sein, wenn nach dem Review eine weitere Optimierung zeitlich möglich und notwendig ist, dies wird durch die Ergebnisse des Reviews bestimmt. 
+\newline\newline
+Im finalen Zyklus wird aufgeräumt und der Entwicklungs-Freeze eingeläutet. Es wird ein letztes Review gemacht und der Prototyp wird so wie er ist präsentiert, evaluiert und ausgewertet. Alle vorherigen Ergebnisse werden als kollektive Masse verarbeitet.
+
+\newpage
+
+\section{Vorläufige Gliederung}
+\textbf{Deckblatt}
+\newline
+\textbf{Anfang}
+\begin{enumerate}
+    \item Abstract
+    \item Vorwort / Danksagung (optional)
+    \item Abbildungs- und Tabellenverzeichnis
+    \item Abkürzungsverzeichnis
+    \item Inhaltsverzeichnis
+\end{enumerate}
+\textbf{Hauptteil}
+\begin{enumerate}
+    \item \textbf{Einleitung}
+    \begin{enumerate}
+        \item Motivation
+        \item Problemstellung und Ziel
+        \item Systemüberblick und Methodiken
+    \end{enumerate}
+    \item \textbf{Konzepte der Prototypen}
+     \begin{enumerate}
+        \item Systemarchitektur und Schnittstellenkonzept
+        \item Evaluationsdesign und Metriken
+        \begin{enumerate}
+            \item Zielgruppen
+            \item Welche Fragen werden gestellt und fokussiert
+        \end{enumerate}
+    \end{enumerate}
+    \item \textbf{Theoretischer Rahmen}
+    \begin{enumerate}
+        \item Grundlagen der Haptik und Fahrphysik
+        \begin{enumerate}
+            \item Grundlagen zum Schleifpunkt
+            \item Grundlagen aktiver Force-Feedback-Systeme
+            \item Wichtigkeit von Haptik in Fahrschulsimulatoren
+        \end{enumerate}
+        \item Analyse bestehender Force-Feedback-Systeme
+        \item Analyse der Aktuatoren
+    \end{enumerate}
+    \item \textbf{Prototypische Umsetzung}
+    \begin{enumerate}
+        \item Entwurf und Aufbau von den Force-Feedback Pedalen
+        \item Software-Schnittstellen
+        \item Umsetzung realitätsnaher Schwingungen
+    \end{enumerate}
+    \item \textbf{Ergebnisse}
+    \begin{enumerate}
+        \item Technische Validierung des Prototypen
+        \item Ergebnisse der Zielsetzungen und Reviews
+        \item Diskussion und Interpretation der Ergebnisse
+    \end{enumerate}
+    \item Fazit
+    \begin{enumerate}
+        \item Zusammenfassung
+        \item Beantwortung der Forschungsfragen
+        \item Ausblick
+    \end{enumerate} 
+\end{enumerate}
+\textbf{Ende}
+\begin{enumerate}
+    \item Nachwort
+    \item Literaturverzeichnis
+    \item Anhang
+    \item Eidesstattliche Erklärung
+\end{enumerate}
+
+\newpage
+\section{Projektplan}
+selbstredend - beschreibt im Detail das strukturierte und methodische Vorgehen anhand einer Zeitlinie
 
 
-Ziel:  -Veigel bietet ein solches Modell an, welches bereits in Richtung der Vollständigkeit wandert und stetig an den offenen Stellen weiterentwickelt wird. - 
-Damit dies erreicht wird sollen die hochrelevanten Fahrschulmanöver: "Schleifpunkt finden" und "ABS-Kontrolle", durch Force-Feedback-Konzepte technisch und psychologisch bewiesen werden. Da keine empirischen Studien existieren, wird der Fokus meiner Arbeit die Realisierung und Evaluation solcher Systeme sein.
+\appendix
+\footnotesize
+\begin{thebibliography}{99}
+\raggedright
+%%% Printquellen zuerst
+\bibitem{Th11} Manuel René Theisen:
+ \emph{Wissenschaftliches Arbeiten: Technik -- Methodik -- Form};
+ 15.~Auflage; Vahlen; München 2011;
+ ISBN 978-3-8006-3830-7
 
-Damit diese Hypothese Da dies bisher unbewiesen bzw. unbetrachtet verweilt, soll eine bewiesen werden kann 
+% Einleitung
+\bibitem{adac_b197} \emph{ADAC e.V.};
+ \url{https://www.adac.de/verkehr/rund-um-den-fuehrerschein/erwerb/b197-fuehrerschein/};
+ abgerufen am 31.10.2025
 
-Die haptischen Systeme müssen eine qualitative Zugehörigkeit zu dem realen Autofahrgefühl   
+\bibitem{ofsa2_sim} \emph{OFSA2};
+ \url{https://www.ofsa2.de/de/rechtlicher-rahmen/simulator};
+ abgerufen am 31.10.2025
 
-Damit diese Erfahrung ein realistisches und authentisches Fahrgefühl ist, wird ein*e Fahrschüler*in in eine virtuelle Umgebung, durch ein "Virtual Reality Headset", gebracht. Außerdem bekommt man konstantes haptisches Feedback durch die haptischen Systeme in den verschiedenen Hardware-Komponenten des Simulators. Ein Sitz sollte Aufschläge in der Simulation wahrnehmen und Feedback geben. So soll auch ein Bremspedal und ein Kupplungspedal ein solches Force-Feedback-System haben, dass bei ABS-Pulsationen und Kupplungschleifpunkt physikalische übereinstimmungen sich bilden. Somit kann ein Fahrschüler diese beiden Fälle genau wahrnehmen und im Simulator üben.
+\bibitem{FP_scheitern_AH} Andreas Herz: \emph{Tränen und Betrug: Warum so viele an der Fahrprüfung scheitern};
+ \url{https://www.br.de/nachrichten/bayern/hohe-durchfall-quote-warum-viele-an-der-fahrpruefung-scheitern}; 
+ abgerufen am 02.11.2025
 
-Der Kontext/Mangel: Aktuelle Fahrschulsimulatoren im Mid-Cost-Segment vernachlässigen die aktive haptische Rückmeldung der Fußpedalerie.
+\bibitem{moving_flm} MOVING:
+ \emph{Branchenaussichten 2025 Fahrlehrermangel ist die größte Herausforderung};
+ \url{https://www.moving-roadsafety.com/wp-content/uploads/2025/03/Final_Branchenaussichten-2025.pdf};
+ abgerufen am 03.11.2025
 
-Die Lücke (Technisch): Es fehlt ein modular adaptierbares und kosteneffizientes Force-Feedback-Konzept, das spezifisch ABS-Pulsationen und den Kupplungsschleifpunkt physikalisch valide abbilden kann.
+ \bibitem{anfahren_w} Jan Frederik Strasmann:
+  \emph{In der Fahrschule das Anfahren lernen: Darauf müssen Sie achten};
+  \url{https://www.bussgeldrechner.org/anfahren.html#FAQ_Richtig_anfahren};
+  abgerufen am 06.11.2025
+  
+\bibitem{anfahren_yt} Fahrschule Punkt:
+  \emph{Warum geht er aus? Anfahren, so geht´s - Fahrschule Punkt};
+  \url{https://www.youtube.com/watch?v=MeWVw3qSQrg};
+  abgerufen am 06.11.2025
 
-Die Methode (Engineering/Mathematik): Dieses Konzept erfordert die Entwicklung eines geeigneten Regelungsalgorithmus und einer Software-Schnittstelle (z.B. basierend auf SimHub oder eigenen Datenprotokollen) zur Umsetzung der Kraft-Weg-Modelle.
+\bibitem{simucube_pedals} Simucube:
+  \emph{Simucube ActivePedal Ultimate};
+  \url{https://simucube.com/simucube-activepedal/};
+  abgerufen am 06.11.2025
+%
 
-Die Lücke (Psychologisch): Darüber hinaus ist der tatsächliche didaktische Mehrwert dieser spezifischen haptischen Informationen auf den Lerntransfer und die Fehlerreduktion bei Fahrschüler*innen empirisch unzureichend belegt.
+\bibitem{SMART_wiki} Wikipedia:
+  \emph{SMART criteria};
+  \url{https://en.wikipedia.org/wiki/SMART_criteria};
+  abgerufen am 06.11.2025
 
-Die Zielsetzung: Ziel dieser Arbeit ist die Entwicklung und Validierung eines solchen Systems.
+\bibitem{grewus_haptic} Grewus:
+  \emph{Hapforce};
+  \url{https://www.grewus.de/products/hapforce};
+  abgerufen am 06.11.2025
 
-Technische Lösung für psychologische Frage gesucht.
-Psychologische Frage: Gibt es besseres Fahrgefühl und erhöhten Lerntransfer durch ABS und Schleifpunkt Force-Feedback Haptiksystem?
-Technische Lösung: Module für Bremspedal und Kupplungspedal einbauen. Module korrekt einstellen. Module und Simulation Schnittpunkt erstellen. Studie. Auswertung.
+\bibitem{simhub_doc} SimHub:
+  \emph{SimHub Dokumentation};
+  \url{https://github.com/SHWotever/SimHub/wiki#motion-addon};
+  abgerufen am 06.11.2025
 
-Es fehlt eine Force-Feedback Lösung für die Brems- und Kopplungspedalerie. Ein kosteneffizientes, aktives Haptisches System soll umgesetzt werden, um ABS und Schleifpunkt für Fahrschüler in der Simulation greifbar und spürbar zu machen, damit der Lerntransfer beim Fahren in einem Auto mit solchen Eigenschaften bereits in der Simulation umsetzbar ist. 
+\bibitem{ac_telemetry} Sim Racing Telemetry:
+  \emph{Assetto Corsa Competizione telemetry};
+  \url{https://www.simracingtelemetry.com/games/AC/};
+  abgerufen am 06.11.2025
 
-Veigel bietet einen Simulator für Fahrschulen an, welcher das Lehren vereinfacht und sicherer macht. Der Simulator besteht aus VR Simulationssoftware und Haptik Setup, dazu gehört Sitz, Lenkrad und nun auch die Pedale. Die Pedale sollen spezifisch für Verbrenner Haptikmodule nutzen, um den Fahrschülern das Gefühl für Schleifpunkt, Bremse und Beschleunigung zu geben. Somit soll eine Einführung in das Autofahren erleichtert werden. Dazu gehört das erlernen und üben zum Finden des Schleifpunktes.
+\bibitem{beamng_doc_prot} BeamNG:
+  \emph{BeamNG Dokumentation für Modding Protocols};
+  \url{https://documentation.beamng.com/modding/protocols/};
+  abgerufen am 06.11.2025
 
-Haptik für Simulationen kann zu realistischen Erfahrungen führen. Eine realistischere Erfahrung wiederum kann zu einem angenehmerem Simulationserlebnis und erhöhtem Erlernen von Zuständen führen. In einer Fahrschulsimulation, mit VR Anbindung, Sitz, Lenkrad, Pedalerie und mehr, sollen Fahrschüler*innen Übungsstunden in einer sicheren aber gleichzeitig real-nahen Umgebung durchführen. Einige aktive Haptik ist bereits verbaut doch in den Pedalen gibt es noch kein aktives haptisches System.
+\end{thebibliography}
 
-Ziel: Erkenntnisse für Schleifpunkt, Bremse und gegebenenfalls Gaspedal ziehen zu können im Vergleich zum jetzigen Stand. Gegebenenfalls Rückschlüsse zu Haptik-Verbesserungen erreicht zu haben.
-> Wenn ein Fahrschüler einen Simulator mit aktiver Haptik an den Pedalen nutzt, entwickelt er ein besseres Gefühl und Verständnis fürs Autofahren. Dadurch lernt er voraussichtlich schneller als der Durchschnitt der Schüler, die einen Simulator mit herkömmlichen Pedalen verwenden.
-
-- Schleifpunkt nur mit Elektronischer aktiv Haptik schwer umsetzbar bzw. wird nicht das gewünschte Ziel erreichen. Eine Möglichkeit ist die Auseinandersetzung mit einem hybriden Ansatz der bereits bei anderen SotA Pedalen umgesetzt wird. (Teuer, sehr speziell) - Aktuelle Umsetzung via Buttkicker
+\normalsize
+\end{document}

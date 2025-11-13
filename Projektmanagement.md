@@ -7,7 +7,11 @@ Hierzu gehören Präsentationen/Vorstellungen/Zusammenfassungen, Arbeitsprozesse
 
 ## Definition und Organisation der Arbeitsprozesse
 
+Texmaker
+
 ## Regelungen
+
+Ablaufdiagramm zum Ende und räumliche Trennung statt farbliche für Systemkomponenten und notwendige Komponenten.
 
 ### Schreib und Notiz Stil
 
@@ -25,7 +29,4 @@ Alle Quellen werden in Zotero gesammelt und in meinen Notizen eingesetzt.
 
 ### Ziele & Meilensteine
 
-Ziele werden mit KISS und SMART definiert.
-
-- KISS: Keep It Simple Stupid
 - SMART: Specific, Measurable, Achievable, Relevant, Time-bound
