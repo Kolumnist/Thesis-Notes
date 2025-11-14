@@ -16,16 +16,15 @@ Immer resultiert eine geringe Bewegung (Geschwindigkeit v) bei hohen Impedanzen 
 
 Impedanz kann in Fällen durch Steifigkeit ersetzt werden
 
-Systemüberblick
-[Mensch] [Aktuator/Hardware-Schnittstelle --Vibrationen-- [Pedal] ] --- [Fahrschulsimulation, Telemetrie, Algorithmus, Drittanbieter-Software]
+#### Systemüberblick
 
-Die Entwicklung des Systems hat so zu erfolgen, dass die Telemetrie-API Telemetriedaten aus der Fahrschulsimulation empfängt, die Daten über einen Signalverarbeitungs-Algorithmus verarbeitet und an eine Drittanbieter-Software sendet. Diese Daten werden von
-der Fahrschulsimulation bereitgestellt und beinhalten unter anderem die aktuelle Geschwindigkeit, das Gewicht des Autos, die Kraftausübung auf dem Pedal und weitere. Aus dem
-Signalverarbeitungs-Algorithmus werden die Haptik-Parameter (Amplitude und Frequenz)
-errechnet. Die Drittanbieter-Software wird abhängig vom genutzten Aktuator und einer Anforderungsanalyse identifiziert.
+Systeme: Mensch, Pedal, Software(noch zu bestimmen)
 
-Daraus ergeben sich folgende Forschungsfragen
+Komponenten in Systeme:
 
-Vorgehensweise;
+1. Pedal - Aktuator, Hardwareschnittstelle
+2. Software - Fahrschulsimulation, Telemetrie, Algorithmus, Third-Party
 
-12.01.2026 Südamerika und nicht verfügbar
+Verbindungen:
+
+[Pedal zu Mensch] Vibrationen ohne Verb
