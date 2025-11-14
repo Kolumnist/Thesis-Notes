@@ -12,3 +12,4 @@ Simhubs native Möglichkeit ein Custom Game hinzuzufügen muss getestet und rech
 
 Simhub custom effects möglichkeit mit javascript und Internet hat viele Quellen
 
+Was noch fehlt: Kupplungseffekte und verschiedene Schwingungsrichtungen (3D Drucke)
