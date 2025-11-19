@@ -8,7 +8,7 @@ den VCA erfolgreich über die SimHub-Telemetrie für den Schleifpunkt am Kupplun
 
 Innerhalb von sechs Tagen soll das Vibrationsmuster, welches SimHub für den Schleifpunkt bereitstellt, für alle Kupplungssituation am Pedal erzeugt werden.
 
-Anschließend erfolgt eine Review mit vier Testpersonen, die das echte Gefühl eines Schleifpunktes beim Schaltvorgang kennen und beurteilen können wie nahe, die Test-Simulation diesem kommt. Die Probanden bewerten die Stärke der wahrgenommenen Vibrationen auf einer Skala und geben eine schriftliche Einschätzung zum Realismus ab.
+Anschließend erfolgt eine Review mit vier Testpersonen, die das echte Gefühl eines Schleifpunktes beim Schaltvorgang kennen und beurteilen können wie nahe, die Test-Simulation diesem kommt. Die Probanden bewerten die Intensität der wahrgenommenen Vibrationen auf einer Skala und geben eine schriftliche Einschätzung zum Realismus ab.
 
 ## Konzept
 
