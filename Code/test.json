@@ -1,0 +1,7 @@
+{
+    "speedKmh": 100,
+    "engineRPM": 1400,
+    "gearInUse": 1,
+    "engineTorque": 300,
+    "clutchPedalPosition": 0.4
+}

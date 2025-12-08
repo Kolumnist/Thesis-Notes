@@ -18,8 +18,10 @@ Anschließend erfolgt eine Review mit vier Testpersonen und den selben Fragen de
 
 ### Spezifisch
 
-Mithilfe von Assetto Corsa und BeamNG als Testumgebung wird der Aktuator, ein VCA von Grewus, am Original v0 Simulator Pedal in unterschiedlichen Positionen angebracht und getestet. Für die Anbringung werden 3D-Drucke gemacht. Es wird ein Verstärker von renkforce (4 Channel Car Amplifier) verwendet, um den Aktuator über Bluetooth als Audioquelle hinzufügen. Dann wird es in SimHub über das Bass Shaker Plugin hinzugefügt und wird erste Testvibrationen durchführen. Desweiteren werden die Custom Effects (ausm Internet oder selber) oder Standard Kupplungseffekte angeschalten und eingerichtet.
-
 Die vier Probanden werden firmen-interne Entwickler mit ausreichend Erfahrung mit dem Autofahren sein. Der Fragebogen wird 3 Fragen haben und es werden während der Review die Bemerkung und Fragen notiert.
 
 ## Tickets
+
+Telemetriedaten ausfindig machen.
+Plugin für Simhub erstellen für udp verbindung.
+Udp verbindung an Unreal Engine / Simulation erstellen
