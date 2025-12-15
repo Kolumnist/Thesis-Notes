@@ -1,10 +1,6 @@
 # Prototyping
 
-Pedale einbauen
-
-Buttkicker einbauen
-
-Simulation nutzen
+Simhub und der Arduino sind verbunden und es scheint gut und vor allem schnell zu funktionieren!
 
 ## Benötigte Telemetriedaten
 

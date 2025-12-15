@@ -1,36 +1,32 @@
-
+using System;
+using System.IO;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
-
-internal class Program
-{
-    private static void Main(string[] args)
+using System.Threading;
+    internal class UDP_Sender
     {
-        UdpClient _udpClient = new UdpClient(LISTENING_PORT);
-        IPEndPoint _endPoint = new IPEndPoint(IPAddress.Any, LISTENING_PORT);
+        public const int PORT = 20777;
 
-        while (true){
-          
-            // Store received data from client
-            string msg = ConfigurationSettings.AppSettings[studentName];
-            if (msg == null) msg = "No such Student available for conversation";
-            byte[] data = Encoding.ASCII.GetBytes(msg);
-            udpc.Send(data, data.Length, _endPoint);
+        private static EndPoint _endPoint;
+        private static UdpClient _udpClient;
+
+        private static void Main(string[] args)
+        {
+            _udpClient = new UdpClient();
+            
+            _endPoint = new IPEndPoint(IPAddress.Loopback, PORT);
+
+            for (int i = 0; i < 6000; i++)
+            {
+                string text = File.ReadAllText("C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\Thesis\\Thesis Notes\\Code\\test.json");
+                Console.WriteLine(text);
+
+                byte[] data = Encoding.ASCII.GetBytes(text);
+
+                _udpClient.Client.SendTo(data, _endPoint);
+                Thread.Sleep(5);
+            }
+            _udpClient.Close();
         }
-
-        Socket sock = new Socket(AddressFamily.InterNetwork, SocketType.Dgram, ProtocolType.Udp);
-
-        IPAddress serverAddr = IPAddress.Parse("192.168.2.255");
-
-        EndPoint endPoint = new IPEndPoint(serverAddr, 20777);
-        Console.WriteLine("Is On");
-
-        string text = File.ReadAllText("C:/Users/collin/OneDrive - Veigel GmbH + Co KG/Dokumente/Thesis/Thesis Notes/Zyklus_2/test.json");
-        Console.WriteLine(text);
-
-        byte[] send_buffer = Encoding.ASCII.GetBytes(text);
-
-        sock.SendTo(send_buffer, endPoint);
     }
-}
