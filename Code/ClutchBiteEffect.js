@@ -12,6 +12,7 @@ const MAX_TORQUE = 2000;
 var bitePointDistanceFromCenter = 0;
 var slipRPM = 0;
 var slipNorm = 0;
+var slipFactor = 0;
 var torqueNorm = 0;
 
 // Unknowns. Need to be determined. Mostly by measuring or feel.
@@ -29,14 +30,20 @@ if (gear == 1 || slipRPM <= 100 || engineRPM <= 100) {
 // ---- Helpers ----
 function clamp01(x) { return Math.max(0, Math.min(1, x)); }
 
+slipRPM = Math.abs(engineRPM - transRPM);
+slipNorm = clamp01(slipRPM / MAX_SLIP_RPM);
+
 function intensity() {
 
     bitePointDistanceFromCenter = Math.abs(clutch - CLUTCH_POINT_CENTER) / CLUTCH_POINT_WIDTH;
-    if (bitePointDistanceFromCenter > 1) {
+    slipFactor = Math.abs(slipNorm - 0.5) / 0.4;
+    
+
+    if (bitePointDistanceFromCenter > 1 || slipFactor > 1) {
         return 0;
     }
-    
-    return Math.cos(bitePointDistanceFromCenter * Math.PI / 2);
+    let intensity = Math.cos(bitePointDistanceFromCenter * Math.PI / 2) * Math.pow(slipFactor, 0.6);
+    return intensity;
 }
 
 function frequency() {
@@ -45,9 +52,6 @@ function frequency() {
     var freq = Math.round(freqHz);
 
     // ###
-
-    slipRPM = Math.abs(engineRPM - transRPM);
-    slipNorm = clamp01(slipRPM / MAX_SLIP_RPM);
 
     return DRIVETRAIN_FREQUENCY * (1 * frequencyModulation * slipNorm);
 }
@@ -64,8 +68,6 @@ function amplitude() {
     var amp = Math.round(ampNorm * 255.0);
 
     // ##
-    var slipFactor = 1 - Math.abs(slipNorm - 0.5) * 2;
-
     console.log(gear + "---- \n")
     console.log(intensity() + "; " + torqueNorm + "; " + slipFactor + "; ");
     return intensity() * torqueNorm * slipFactor * BASE_AMPLITUDE;
