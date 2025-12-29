@@ -4,9 +4,10 @@
 
 1. Ladekabel an Laptop
 2. Fragebogen vorbereiten
-3. Kupplungspedal muss in Moza eingestellt werden
-4. Einmal Ablauf testen
-5. Simulation und Level starten
+3. Kabel sicher stellen
+4. Simhub starten und alles anmachen
+5. SteamVR und Custom Level starten
+6. Einmal Ablauf testen
 
 ## Ablauf
 
@@ -16,9 +17,9 @@ Dauer: ~15 min
 
 2. Proband soll sich an den Simulator setzen und Sitzposition sowie Pedale anpassen.
 
-3. Ablauferklärung, Proband soll Level durchspielen und bei Szenarien (Anfahren, Halten, Anfahren Berg, Hochschalten, Runterschalten) auf Vibration achten.
+3. Ablauferklärung, Proband soll im Custom Level umherfahren und alle Szenarien (Anfahren, Halten, Anfahren Berg, Hochschalten, Runterschalten) durchgehen und auf Vibration achten.
 
-4. Proband spielt Level durch.
+4. Proband führt durch.
 
 5. Restlicher Fragebogen wird vom Probanden ausgefüllt.
 
@@ -36,27 +37,16 @@ Siehe \Review\Zyklus2_Review_Prototyp_Vibrationen_am_Kupplungspedal(1-4).xlsx
 
 ## Erkenntnisse
 
+Am zweiten Reviewtag ist der Arduino Nano nicht angesprungen und hatte nicht funktioniert.
+
 ### Intensität
 
-Anfahren und Halten schwach wenn man nicht darauf achtet.
-
-Schalten im Allgemeinen schwach und bei Perfektem Schalten ist nicht möglich(Sollte möglich sein und keine Vibration hervorbringen).
-
-Runterschalten viel zu schwach.
 
 ### Zeitliche Abgestimmtheit
 
-Beim Schalten und Anfahren wurde eine verspätete Vibration beobachtet. - Latenzproblem oder falsche Konfiguration.
-
-"Man fährt bereits bevor die Vibration spürbar ist"
 
 ### Authentizität
 
-Runterschalten fühlt sich anders an.
-
-Vibrationen sollen weicher sein und stärker.
-
-Die Welle (Frequenzen, Amplitude & Intensitäten) sollten angepasst werden.
 
 ## Verbesserungen Review
 
