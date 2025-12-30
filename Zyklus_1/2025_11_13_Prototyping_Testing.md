@@ -1,8 +1,14 @@
 # Prototyping
 
+## Anmerkungen
+
+Probleme mit Pedalen
+
+Einfindung mit Rig Hardware interessant und manchmal schwer
+
 ## Tickets abarbeiten
 
-Nach fünf Tagen waren alle Tickets abgearbeitet und keine zusätzlichen Aufgaben wurden gefunden. Review hat früher angefangen.
+Nach fünf Tagen waren alle Tickets abgearbeitet und keine zusätzlichen Aufgaben wurden gefunden. Review startet früher.
 
 ### VCA als Audioquelle in Simhub Plugin
 
@@ -27,9 +33,3 @@ Design für Befestigung des VCA am Pedal wurde von Kollegen erstellt. Befestigun
 Zu Kupplung und Kupplungsvibrationen erkundigt. Simhubs Custom Effects Möglichkeiten ausgekundschaftet und gefundene Schleifpunkt Custom Effects ausprobiert und einige eigene Versuche für einen Effekt wurden getestet.
 
 Finaler Custom Effect für die Review festgelegt.
-
-## Anmerkungen
-
-Probleme mit Pedalen
-
-Einfindung mit Rig Hardware interessant und manchmal schwer

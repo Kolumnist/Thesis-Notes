@@ -1,5 +1,7 @@
 # Refine & Iterate
 
+Zyklus drei war zu viel auf einmal und schlecht geplant. Plaung für Zyklus vier wird genauer und länger sein um wirklich am Ziel dranzubleiben.
+
 ## Ziel
 
 _Das Ziel ist es,_
@@ -10,7 +12,7 @@ Innerhalb von sieben Tagen soll eine Anforderungsanalyse zur Bestimmung des fort
 
 Anschließend erfolgt eine Review mit fünf Testpersonen mittels des vorhandenen Fragenkatalogs und der nach dem Testdurchlauf ausgefüllt wird.
 
-## Konzept
+## Konzepte
 
 ### Allgemein
 
