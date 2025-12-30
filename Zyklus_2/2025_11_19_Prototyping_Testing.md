@@ -2,8 +2,6 @@
 
 ## Anmerkungen
 
-Pedale einbauen, Buttkicker einbauen
-
 Vorläufig wurde auf UDP aufgrund von Einfachheit und Dokumentation gesetzt. In Zukunft evtl. über Memory Share, wenn noch weiter optimiert werden muss.
 
 Es gibt kein Level zum Testen für Berg Anfahren aktuell.
@@ -24,7 +22,7 @@ Custom Game funktioniert nicht wie ich anfangs vermutete aber es erkennt eine .e
 
 Plugins sind sehr schlecht dokumentiert aber es gibt sehr viele Möglichkeiten. UI kann erstellt werden. Telemetriedaten gespeichert und auf einige verschiedene Wege geupdated werden. Allerdings musste vieles aus Community Projekten herausgelesen werden.
 
-### Custom Game hinzufügen und durchtesten
+### +Custom Game hinzufügen und durchtesten
 
 Custom Game hat wie erwähnt nich so funktioniert wie ich dachte. Daher musste ich es mehrmals testen und herausfinden ob ich doch recht habe und ohne Plugin an die Telemetriedaten komme. Das tue ich nicht. Allerdings konnte ich herausfinden das dieses Feature sehr nutzlos für meinen Zweck ist außer um das Bass Shaker Plugin zu aktivieren.
 

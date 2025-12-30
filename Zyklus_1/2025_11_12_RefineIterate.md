@@ -13,7 +13,7 @@ Anschließend erfolgt eine Review mit vier Testpersonen, die das echte Gefühl e
 ## Recherche
 
 Lange Recherche betrieben, um Möglichkeiten sowie Gedankengut auf das richtige Ziel zu bringen.
-Simhub, Aktuatorik, Vibrationen und mehr. Aber zu oberflächig. Weitere Recherchen im nächsten Zyklus notwendig.
+Simhub, Aktuatorik, Vibrationen, Simracing und mehr. Aber zu oberflächig. Weitere Recherchen im nächsten Zyklus notwendig.
 
 ## Konzepte
 

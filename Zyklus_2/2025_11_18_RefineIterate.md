@@ -20,6 +20,8 @@ Genauere Recherche zu Simhub Plugins und Custom Game findet statt. Die UDP Verbi
 
 Die Review durchführen. Zuerst den Fragebogen überarbeiten. Es werden firmen-interne Mitarbeiter, mit ausreichend Erfahrung, herangezogen und spielen die Simulation in einem vorgegebenen Level und füllen den Fragebogen aus.
 
+**Das Kupplungspedal vibriert, während der Review, beim Schaltvorgang sowie beim Anfahren und macht den Schleifpunkt realistisch identifizierbar.**
+
 ### Simhub Verbindung
 
 Simhub kann Daten über UDP empfangen. Es gibt Simhub Plugins mit denen man die UDP Verbindung nutzen kann und Simhubs Funktionen erweitern kann. Da das Bass Shaker Plugin nur funktioniert während ein Spiel aktiv von Simhub wahrgenommen wird, kann das Custom Game Feature von Simhub verwendet werden. Es bedarf weiterer Recherche da Plugins und Custom Game Feature schlecht dokumentiert sind.
