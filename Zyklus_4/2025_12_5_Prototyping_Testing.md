@@ -1,0 +1,67 @@
+# Prototyping
+
+## Anmerkungen
+
+Ticket vergessen zu erstellen:
+
+- Neue Pedale einbauen
+
+Außerdem sollte der Buttkicker eingebaut werden. Dieser wurde dann mit Simhub als Audioquelle verbunden und getestet. Da dieser gleichzeitig dazugeschaltet werden kann und deutlich stärker ist wie der VCA wurde alles sehr unsicher.
+
+Custom Level zum Testen mit Berg Anfahren erhalten.
+
+Fehler im neuesten Build besteht weiterhin.
+
+Aufgrund von vielen Faktoren und Verwirrung ist Zyklus 3 gescheitert. Durch das ändern der Pedale und hinzufügen des Buttkickers mussten diese getestet werden... aber eigentlich auch nicht es wurde dennoch getan von mir. Das Ziel ist verloren gegangen während des Zyklus und anstatt den neuen Aktuator zu testen wurde maximal an der Logik gefeilt. Allerdings wurde alles gleichzeitig gemacht.
+
+Simhub und der Arduino sind verbunden und es scheint gut und vor allem schnell zu funktionieren!
+
+Logik anpassen so dass es sich anfühlt wie das was ich spürte UND die vorigen Reviews beachten.
+
+## Tickets abarbeiten
+
+Nach x Tagen wurde der Zyklus beendet. Es gab folgende zusätzliche Aufgaben:
+
+- xxx
+
+Review gezwungen.
+
+### Szenarien definieren
+
+Es ist auch immer das Gegenteil möglich.
+
+Anfahren & Schalten sind die Hauptszenarien und folgendes sind Unterszenarien:
+
+| Szenario | Vibrations-Art | Frequenz | Intensität |
+| :--- | :--- | :--- | :--- |
+| **Normaler Schleifpunkt** | Feines Kribbeln | Hoch | Niedrig |
+| **Hohe Drehzahl (viel Gas)** | Raues, aggressives Summen | Sehr Hoch | Mittel bis Hoch |
+| **Kurz vor dem Abwürgen** | Grobes Schlagen / Ruckeln | Niedrig | Sehr Hoch |
+| **Bremse & Schleifpunkt** | Starkes, "angespanntes" Zittern | Hoch | Hoch |
+| --- | --- | --- | --- |
+| **Kupplung voll oder gar nicht getreten** | Fast keine (ruhig) | - | Minimal |
+| **Gang N** | Ruhig | - | minimal |
+| --- | --- | --- | --- |
+| **Runterschalten (Motorbremse)** | Aggressives Sägen / Surren,  Motor wird vom Getriebe "hochgerissen" | Sehr Hoch | Hoch |
+| **Zu frühes Hochschalten** | Dumpfes Wummern / Klopfen,  Motor läuft untertourig (nahe Abwürggrenze) | Niedrig | Mittel |
+| **Schalten unter Last (Gas geben)** | Kurzer, harter Schlag, Drehmomentspitze trifft auf die Reibscheibe | - | Hoch |
+| **Perfektes Schalten** | Sanftes, kurzes Streicheln, Drehzahlen von Motor und Getriebe passen fast | Mittel | Minimal |
+| **Verschalten (Gang hakt)** | Mechanisches Mahlen, Synchronringe arbeiten gegen Widerstand | Mittel | Mittel |
+
+### Effekte definieren
+
+Einige Definitionen sind bereits in der Tabelle vorhanden aber um genauer für jeden "Effekt" oder jeden Einfluss zu sprechen nutze ich dieses Ticket:
+
+#### Normaler Schleifpunkt
+
+Ab 80% des Kupplungsweges fängt das Simulations-Auto zu rollen an.
+Die Vibration muss daher kurz vorher spürbar sein.
+Außerdem sollte die Vibration bei ungefähr 70/60% am Stärksten spürbar sein. (theoretisch)
+
+Wenn wir davon ausgehen das bei 40/30% ungefähr die Kupplung gut sitzt dann sollte dort die Schleifpunktvibration enden.
+
+### Logik umschreiben
+
+Remap Methode probiert:
+
+    bitePointFactor = Math.max(((1 + BITEPOINT_WIDTH) - ((1 + BITEPOINT_WIDTH) / (1 - BITEPOINT_WIDTH)) * clutchDistance) - BITEPOINT_WIDTH, 0); // [1 ; 0]

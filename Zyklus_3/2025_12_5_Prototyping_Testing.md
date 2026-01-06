@@ -16,7 +16,7 @@ Aufgrund von vielen Faktoren und Verwirrung ist Zyklus 3 gescheitert. Durch das 
 
 Simhub und der Arduino sind verbunden und es scheint gut und vor allem schnell zu funktionieren!
 
-Logik anpassen so dass es sich anfühlt wie das was ich spürte UND die vorigen Reviews beachten. 
+Logik anpassen so dass es sich anfühlt wie das was ich spürte UND die vorigen Reviews beachten.
 
 ## Tickets abarbeiten
 
