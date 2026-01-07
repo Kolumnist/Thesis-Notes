@@ -27,18 +27,25 @@ var gear = $prop('SimTelemetryPlugin.GearInUse'); // we need to calibrate this v
 var brakeAddition = 0;
 
 // ---
-var rpmNormalized = Math.max(engineRPM / MAX_ENGINE_RPM, 1);
+var rpmNormalized = Math.min(engineRPM / MAX_ENGINE_RPM, 1);
 
 // Note: Add Brake stuff
+// Note: Add Shift Early:
+/* else if (gear > 2 && engineRPM < 1200 && throttle > 0.8 && clutch < 0.2) {
+    // Shifting too early
+    amplitude = 100;
+    frequency = 7;
+} */
+
 let bitePointFactor = (clutch >= BITEPOINT_MIN) * (clutch <= BITEPOINT_MAX);
 
 let slipRPM = engineRPM - transRPM;
-let slipFactor = Math.pow(Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM+speed*10)), 0.5);
+let slipFactor = Math.pow(Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM+speed)), 0.45);
 
 let torqueNormalized = Math.min(Math.abs(torque) / MAX_TORQUE);
 let torqueFactor = 2 - (1 / (1 + torqueCalibration * torqueNormalized)); //hyperbl
 
-let bitePointIntensity = Math.max(bitePointFactor * slipFactor * torqueFactor, 1) * (gear != 1);
+let bitePointIntensity = Math.min(bitePointFactor * slipFactor * torqueFactor, 1) * (gear != 1);
 
 let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized;
 
@@ -47,8 +54,8 @@ let amplitude = bitePointIntensity * BASE_AMPLITUDE * 100;
 // Shifting and Abwürgen:
 
 let slipDelta = Math.abs(slipRPM - root["lastSlip"]);
-if (slipDelta > 500 || (amplitude != 0 && engineRPM <= 600)) {
-    root["shockTimer"] = 20;
+if (slipDelta > 700 || (engineRPM <= 600 && slipDelta > 100)) {
+    root["shockTimer"] = 5;
 }
 
 if(root["shockTimer"] > 0) {
@@ -60,10 +67,6 @@ if(root["shockTimer"] > 0) {
     // Engine Braking
     amplitude = slipFactor;
     frequency = 30 + (rpmNormalized * FREQUENCY_MODULATION);
-} else if (gear > 2 && engineRPM < 1200 && throttle > 0.8 && clutch < 0.2) {
-    // Shifting too early
-    amplitude = 100;
-    frequency = 7;
 }
 
 root["lastSlip"] = slipRPM;
