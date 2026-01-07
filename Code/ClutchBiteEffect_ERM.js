@@ -1,16 +1,16 @@
-const BITEPOINT_CENTER = 0.65;
+const BITEPOINT_CENTER = 0.6;
 //const BITEPOINT_WIDTH = 0.25;
 const BITEPOINT_MAX = 0.875;
 const BITEPOINT_MIN = 0.3;
 
-const DRIVETRAIN_FREQUENCY = 15; // between 5-30 hz
+const DRIVETRAIN_FREQUENCY = 10; // between 5-30 hz
 
 const MAX_TORQUE = 270;
 const MAX_ENGINE_RPM = 5000;
 const MAX_SLIP_RPM = 2000; // between 300 to 2500
 
-const FREQUENCY_MODULATION = 0.4; // 0.2 to 0.8 maybe even more or less
-const BASE_AMPLITUDE = 1 // can be anything I want. Its basically like my Audio Volume Regler
+const FREQUENCY_MODULATION = 20;
+const BASE_AMPLITUDE = 1;
 
 var clutch = $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
 var speed = $prop('SimTelemetryPlugin.SpeedMs') * 3.6;
@@ -23,11 +23,9 @@ var MAX_SLIP_RPM_SHIFT = 5000;
 
 // Clutch Bite Point
 var clutchDistance = 0;
-var bitePointAmplitude = 0;
 var noBitePoint = 0;
 
 var brakeAddition = 0;
-var rpmAddition = 0;
 
 var slipRPM = 0;
 
@@ -41,14 +39,12 @@ function clamp01(x) {
     return Math.max(0, Math.min(1, x));
 }
 
-// --- Bite Point Intensity
-function clutchBitePointIntensity() {
-    //rpmNormalized = engineRPM / MAX_ENGINE_RPM;
-    //brakeAddition = 15 * brakeIn;
+// Add Brake stuff
 
+function clutchBitePointIntensity() {
     slipRPM = Math.abs(engineRPM - transRPM);
     slipNormalized = clamp01(slipRPM / MAX_SLIP_RPM, 1);
-    let slipFactor = Math.pow(slipNormalized * (1 - Math.abs(slipNormalized - 0.6)), 0.4);
+    let slipFactor = Math.pow(slipNormalized * (1 - Math.abs(slipNormalized - 0.6)) + 0.1, 0.4);
 
     torqueNormalized = clamp01(Math.abs(torque) / MAX_TORQUE);
     let torqueFactor = 1 + 0.4 * torqueNormalized;
@@ -56,30 +52,23 @@ function clutchBitePointIntensity() {
     let range = (clutch <= BITEPOINT_CENTER) ? (BITEPOINT_CENTER - BITEPOINT_MIN) : (BITEPOINT_MAX - BITEPOINT_CENTER);
     clutchDistance = Math.abs(clutch - BITEPOINT_CENTER); // [0 ; BITEPOINT_CENTER or 1]
     let clutchDistanceNormalized = Math.min(clutchDistance / range, 1);
-    let bitePointFactor = Math.pow(1.0 - clutchDistanceNormalized, 0.6); // [1 ; 0]
+    let bitePointFactor = Math.pow(1.0 - clutchDistanceNormalized, 0.8); // [1 ; 0]
     
-    let bitePointIntensity = Math.max(slipFactor * bitePointFactor * torqueFactor, 1.1) * (gear != 1);
-    // noBitePoint = (gear != 1);
+    let bitePointIntensity = Math.max(slipFactor * bitePointFactor * torqueFactor, 1) * (gear != 1);
+
+    return bitePointIntensity;
 }
 
-if (bitePointAmplitude != 0 && engineRPM <= 600) {
-    // Do short effect for abwürgen and zu hohes Schalten
+rpmNormalized = engineRPM / MAX_ENGINE_RPM;
+let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized; // [30; ~14]
+
+let amplitude = clutchBitePointIntensity() * BASE_AMPLITUDE * 100;
+
+if (amplitude != 0 && engineRPM <= 600) {
+    //abwürgen
+    amplitude = 100;
+    frequency = 7;
 }
-
-
-
-function intensity() {
-    let slipDistanceFromCenter = Math.abs(slipNorm - 0.5) * 2;
-    let slipFactor = Math.cos(slipDistanceFromCenter * Math.PI / 2);
-
-    return Math.pow(Math.max(bitePointFactor, slipFactor), 0.475);
-}
-
-var amplitude = clutchBitePointIntensity() * BASE_AMPLITUDE;
-// --- 
-var frequency = DRIVETRAIN_FREQUENCY * (1 + FREQUENCY_MODULATION * rpmNormalized);
-// frequency = [26; 15]
-// ---
 
 return Math.round(frequency) + ";" + Math.round(amplitude) + "\n";
 
