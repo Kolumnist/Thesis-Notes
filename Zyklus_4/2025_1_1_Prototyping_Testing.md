@@ -20,9 +20,9 @@ Logik anpassen so dass es sich anfühlt wie das was ich spürte UND die vorigen 
 
 ## Tickets abarbeiten
 
-Nach x Tagen wurde der Zyklus beendet. Es gab folgende zusätzliche Aufgaben:
+Nach 7 Tagen wurde der Zyklus beendet. Es gab keine zusätzlichen Aufgaben
 
-- xxx
+Zwei der Effekte wurden nicht umgesetzt aufgrund fehlender Daten.
 
 Review gezwungen.
 
@@ -45,8 +45,6 @@ Anfahren & Schalten sind die Hauptszenarien und folgendes sind Unterszenarien:
 | **Runterschalten (Motorbremse)** | Aggressives Sägen / Surren,  Motor wird vom Getriebe "hochgerissen" | Sehr Hoch | Hoch |
 | **Zu frühes Hochschalten** | Dumpfes Wummern / Klopfen,  Motor läuft untertourig (nahe Abwürggrenze) | Niedrig | Mittel |
 | **Schalten unter Last (Gas geben)** | Kurzer, harter Schlag, Drehmomentspitze trifft auf die Reibscheibe | - | Hoch |
-| **Perfektes Schalten** | Sanftes, kurzes Streicheln, Drehzahlen von Motor und Getriebe passen fast | Mittel | Minimal |
-| **Verschalten (Gang hakt)** | Mechanisches Mahlen, Synchronringe arbeiten gegen Widerstand | Mittel | Mittel |
 
 ### Effekte definieren
 
@@ -60,8 +58,40 @@ Außerdem sollte die Vibration bei ungefähr 70/60% am Stärksten spürbar sein.
 
 Wenn wir davon ausgehen das bei 40/30% ungefähr die Kupplung gut sitzt dann sollte dort die Schleifpunktvibration enden.
 
+Relevant für diese Vibration ist der Schlupf, Drehmoment und die Position des Kupplungspedals.
+
+Idee: Schlupf und Drehmoment deutlich stärker spürbar. Schleifpunkt wird nun durch diese zwei bestimmt und selbst nicht wirklich.
+
+#### Hohe Drehzahl Hohe Frequenz
+
+Mit höherer Drehzahl wird die Frequenz höher. Da der Schlupf höher sein sollte wird die Vibration außerdem intensiver.
+
+#### Kurz vor dem Abwürgen, Ruckeln und Grobes Schlagen
+
+Die Intensität wird auf das Maximum gebracht und die Frequenz auf ein Minimum. Eine weitere Möglichkeit ist es den DRV2605 auszunutzen aber dann ist es weniger modular nutzbar.
+
+#### 
+
 ### Logik umschreiben
 
-Remap Methode probiert:
+#### Arduino Logik Änderungen
+
+...
+
+#### Taktische Entscheidungen für die JS Logik
+
+Remap Methode probiert um Vibration am Schleifpunkt vom Gefühl besser zu machen:
 
     bitePointFactor = Math.max(((1 + BITEPOINT_WIDTH) - ((1 + BITEPOINT_WIDTH) / (1 - BITEPOINT_WIDTH)) * clutchDistance) - BITEPOINT_WIDTH, 0); // [1 ; 0]
+
+Wirklich arg viel besser war das nicht und nutzte den Bitepoint width. Ich möchte aber keine Gaussian Bell Curve also Idee verworfen.
+
+Zweiter Versuch für Schleifpunkt ist schön aber ich brauche eigentlich den Wert nur als 0 oder 1. Deshalb wird diese Rechnung ebenfalls verworfen. Alles andere spürt man eh nicht.
+
+    clutchDistance = Math.abs(clutch - BITEPOINT_CENTER); // [0 ; BITEPOINT_CENTER or 1]
+    let range = (clutch <= BITEPOINT_CENTER) ? (BITEPOINT_CENTER - BITEPOINT_MIN) : (BITEPOINT_MAX - BITEPOINT_CENTER);
+    let clutchDistanceNormalized = Math.min(clutchDistance / range, 1);
+    let bitePointFactor = Math.pow(1.0 - clutchDistanceNormalized, 0.01); // [1 ; 0]
+
+Modularität, Realismus, Gefühl und System
+

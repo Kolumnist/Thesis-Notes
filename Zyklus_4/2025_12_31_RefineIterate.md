@@ -20,7 +20,7 @@ Mein vibrotaktiles System + kinästethisches system sind nicht ausreichend gepla
 
 Die Szenarien haben alle spezifische Unterszenarien welche definiert werden müssen. Daraus ergeben sich Effekte die erstellt und in die Logik miteingebaut werden. Die Logik wird verbessert und dann die Review durchführt.
 
-**Das Kupplungspedal vibriert bei allen Szenarien mit ihrem jeweilig relevanten Effekt über einen einzigen Aktuator am Pedal. Die Vibration soll auf eine Hilfe beim Erlernen der Schaltxxx abzielen. Dazu muss es realistisch sein.**
+**Das Kupplungspedal vibriert bei allen Szenarien mit ihrem jeweilig relevanten Effekt über einen einzigen Aktuator am Pedal. Die Vibration soll auf eine Hilfe beim Erlernen der Schaltkompetenz abzielen. Dazu muss es realistisch sein.**
 
 ## Tickets
 

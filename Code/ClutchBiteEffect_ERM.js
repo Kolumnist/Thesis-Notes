@@ -43,15 +43,15 @@ let slipRPM = engineRPM - transRPM;
 let slipFactor = Math.pow(Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM+speed)), 0.45);
 
 let torqueNormalized = Math.min(Math.abs(torque) / MAX_TORQUE);
-let torqueFactor = 2 - (1 / (1 + torqueCalibration * torqueNormalized)); //hyperbl
+let torqueFactor = 2 - (1 / (1 + torqueCalibration * torqueNormalized)); //hyperbl 1 - 1.66
 
 let bitePointIntensity = Math.min(bitePointFactor * slipFactor * torqueFactor, 1) * (gear != 1);
 
 let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized;
 
-let amplitude = bitePointIntensity * BASE_AMPLITUDE * 100;
+let amplitude = bitePointIntensity * amplitudeCalibration * 100;
 
-// Shifting and Abwürgen:
+// Shifting and Stall:
 
 let slipDelta = Math.abs(slipRPM - root["lastSlip"]);
 if (slipDelta > 700 || (engineRPM <= 600 && slipDelta > 100)) {
@@ -59,13 +59,13 @@ if (slipDelta > 700 || (engineRPM <= 600 && slipDelta > 100)) {
 }
 
 if(root["shockTimer"] > 0) {
-    // Shift Shock OR Abwürgen Shock
+    // Shift Shock OR Stall Shock
     amplitude = 100;
     frequency = 5;
     root["shockTimer"]--;
-} else if (slipRPM < -100 && clutch < 0.9) {
+} else if (slipRPM < -100 && clutch < BITEPOINT_MAX) {
     // Engine Braking
-    amplitude = slipFactor;
+    amplitude = slipFactor*100;
     frequency = 30 + (rpmNormalized * FREQUENCY_MODULATION);
 }
 
