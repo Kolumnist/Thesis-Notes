@@ -1,0 +1,66 @@
+{
+  "format": 1,
+  "restore": {
+    "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj": {}
+  },
+  "projects": {
+    "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj",
+        "projectName": "User.SYNPLISimTelemetryPlugin",
+        "projectPath": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj",
+        "packagesPath": "C:\\Users\\collin\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\obj\\",
+        "projectStyle": "PackageReference",
+        "skipContentFileWrite": true,
+        "UsingMicrosoftNETSdk": false,
+        "configFilePaths": [
+          "C:\\Users\\collin\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+        ],
+        "originalTargetFrameworks": [
+          "net48"
+        ],
+        "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net48": {
+            "projectReferences": {}
+          }
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        }
+      },
+      "frameworks": {
+        "net48": {
+          "dependencies": {
+            "Newtonsoft.Json": {
+              "target": "Package",
+              "version": "[13.0.4, )"
+            }
+          }
+        }
+      },
+      "runtimes": {
+        "win": {
+          "#import": []
+        },
+        "win-arm64": {
+          "#import": []
+        },
+        "win-x64": {
+          "#import": []
+        },
+        "win-x86": {
+          "#import": []
+        }
+      }
+    }
+  }
+}

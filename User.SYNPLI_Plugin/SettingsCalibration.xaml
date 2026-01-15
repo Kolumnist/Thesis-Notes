@@ -1,0 +1,23 @@
+﻿<UserControl x:Class="User.SYNPLISimTelemetryPlugin.SettingsCalibration"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:User.SYNPLISimTelemetryPlugin"
+             mc:Ignorable="d" 
+             d:DesignHeight="800" d:DesignWidth="800">
+    <ScrollViewer VerticalScrollBarVisibility="Auto">
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition>
+                </ColumnDefinition>
+                <ColumnDefinition>
+                </ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Margin="20" x:Name="CalibrationPanel" Grid.Column="0">
+            </StackPanel>
+            <StackPanel Margin="20" x:Name="TestPanel" Grid.Column="1">
+            </StackPanel>
+        </Grid>
+    </ScrollViewer>  
+</UserControl>

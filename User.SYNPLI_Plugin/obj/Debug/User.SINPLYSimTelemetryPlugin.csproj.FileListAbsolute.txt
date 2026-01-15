@@ -1,0 +1,229 @@
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.SINPLYSimTelemetryPlugin.csproj.AssemblyReference.cache
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\DemoDialogWindow.g.cs
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.PluginSdkDemo_MarkupCompile.cache
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.PluginSdkDemo_MarkupCompile.lref
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\User.PluginSdkDemo.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\User.PluginSdkDemo.pdb
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SimHubWPF.exe
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\CefSharp.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\CefSharp.Wpf.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\CefSharp.OffScreen.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SteamHelper.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\ToastNotifications.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Diagnostics.Runtime.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SimHub.Plugins.Motion.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\CefSharp.Core.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\ToastNotifications.Messages.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\ACSharedMemory.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\GSIReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\PCarsSharedMemory.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\ICarsReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\CodemastersReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\ETS2Reader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\RREReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\RfactorReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\LFSReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\GRallyReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SimBin.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\GTReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\PibosoReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\NoLimits2Reader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\TrackmaniaReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\XPlaneReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SimHub.Plugins.Web.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\OmsiReader.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\WarThunder.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\HelixToolkit.Wpf.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SimHub.WitMotion.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\CefSharp.Core.Runtime.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\iRacingSDK.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\InSimDotNet.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.WebSockets.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Rewrite.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.ResponseCompression.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Cors.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Routing.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Markdig.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Hosting.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Diagnostics.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.StaticFiles.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\YamlDotNet.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\System.IO.Pipelines.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Net.Http.Headers.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authorization.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.ObjectPool.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Antiforgery.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.DataProtection.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Localization.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\bin\Debug\SimHubWPF.exe.config
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.PluginSdkDemo.Properties.Resources.resources
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.SINPLYSimTelemetryPlugin.csproj.GenerateResource.cache
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.SINPLYSimTelemetryPlugin.csproj.CoreCompileInputs.cache
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.SIN.90DE33C8.Up2Date
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.PluginSdkDemo.dll
+C:\Users\collin\OneDrive - Veigel GmbH + Co KG\Dokumente\Thesis\SimhubPlugin\User.SYNPLI_Plugin\obj\Debug\User.PluginSdkDemo.pdb
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SINPLYSimTelemetryPlugin.csproj.AssemblyReference.cache
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SYNPLISimTelemetryPlugin.Properties.Resources.resources
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SINPLYSimTelemetryPlugin.csproj.GenerateResource.cache
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SINPLYSimTelemetryPlugin.csproj.CoreCompileInputs.cache
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SIN.90DE33C8.Up2Date
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SYNPLISimTelemetryPlugin.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\obj\Debug\User.SYNPLISimTelemetryPlugin.pdb
+C:\Program Files (x86)\SimHub\User.SYNPLISimTelemetryPlugin.dll
+C:\Program Files (x86)\SimHub\User.SYNPLISimTelemetryPlugin.pdb
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\User.SYNPLISimTelemetryPlugin.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\User.SYNPLISimTelemetryPlugin.pdb
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SimHubWPF.exe
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\CefSharp.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\CefSharp.Wpf.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\CefSharp.OffScreen.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SteamHelper.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\ToastNotifications.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Hardcodet.NotifyIcon.Wpf.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Diagnostics.Runtime.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SimHub.Plugins.Motion.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\CefSharp.Core.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\ToastNotifications.Messages.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\ACSharedMemory.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\GSIReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\PCarsSharedMemory.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\ICarsReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\CodemastersReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\ETS2Reader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\RREReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\RfactorReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\LFSReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\GRallyReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SimBin.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\GTReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\PibosoReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\NoLimits2Reader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\TrackmaniaReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\XPlaneReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SimHub.Plugins.Web.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\OmsiReader.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\WarThunder.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Diagnostics.NETCore.Client.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\HelixToolkit.Wpf.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SimHub.WitMotion.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\CefSharp.Core.Runtime.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\iRacingSDK.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\InSimDotNet.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Http.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Hosting.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.DependencyInjection.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.WebSockets.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Rewrite.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Core.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.Core.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.Formatters.Json.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.ResponseCompression.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Cors.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Routing.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Primitives.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Markdig.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.ViewFeatures.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Http.Features.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Hosting.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Options.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Diagnostics.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.StaticFiles.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.FileProviders.Physical.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.FileProviders.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\YamlDotNet.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\System.Text.Encodings.Web.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Hosting.Server.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\System.Net.WebSockets.WebSocketProtocol.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Http.Extensions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\System.IO.Pipelines.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Connections.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Server.Kestrel.Transport.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.Binder.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Net.Http.Headers.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.WebUtilities.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Routing.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authentication.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authorization.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\System.Diagnostics.DiagnosticSource.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authorization.Policy.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.DependencyModel.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.DependencyInjection.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.ResponseCaching.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Authentication.Core.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.JsonPatch.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.ObjectPool.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Html.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Localization.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Mvc.DataAnnotations.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Diagnostics.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Antiforgery.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.DataProtection.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.DataProtection.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.WebEncoders.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Logging.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Hosting.Abstractions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.EnvironmentVariables.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Configuration.FileExtensions.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.FileSystemGlobbing.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.Extensions.Localization.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\Microsoft.AspNetCore.Cryptography.Internal.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\System.Security.Cryptography.Xml.dll
+C:\Program Files (x86)\SimHub\PluginSdk\User.SYNPLI_Plugin\bin\Debug\SimHubWPF.exe.config
