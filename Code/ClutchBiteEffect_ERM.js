@@ -2,22 +2,19 @@ if(root["shiftShockTimer"] == null) root["shiftShockTimer"] = 0;
 if(root["lastSlip"] == null) root["lastSlip"] = 0;
 if(root["previousGear"] == null) root["previousGear"] = 0;
 
-const BITEPOINT_MAX = 0.875;
-const BITEPOINT_MIN = 0.5;
-
-const DRIVETRAIN_FREQUENCY = 8; // between 5-30 hz
-const FREQUENCY_MODULATION = 30;
-
-const MAX_TORQUE = 250;
-const MAX_ENGINE_RPM = 5000;
-const MAX_SLIP_RPM = 2000; // between 300 to 2500
-
-// calibration values
-var amplitudeCalibration = 1;
-var torqueCalibration = 2;
+// Calibration Values
+var BITEPOINT_MAX = $prop('SimTelemetryPlugin.Settings.BiteMax') || 0.875;
+var BITEPOINT_MIN = $prop('SimTelemetryPlugin.Settings.BiteMin') || 0.5;
+var DRIVETRAIN_FREQUENCY = $prop('SimTelemetryPlugin.Settings.FreqBase') || 8;
+var FREQUENCY_MODULATION = $prop('SimTelemetryPlugin.Settings.FreqMod') || 30;
+var MAX_TORQUE = $prop('SimTelemetryPlugin.Settings.MaxTorque') || 250;
+var MAX_ENGINE_RPM = $prop('SimTelemetryPlugin.Settings.MaxRPM') || 5000;
+var MAX_SLIP_RPM = $prop('SimTelemetryPlugin.Settings.MaxSlip') || 2000;
+var amplitudeCalibration = $prop('SimTelemetryPlugin.Settings.AmplitudeCalibration') || 1;
+var torqueCalibration = $prop('SimTelemetryPlugin.Settings.TorqueCalibration') || 2;
 
 // INPUTS
-var clutch = $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
+var clutch = $prop('') ? $prop('SimTelemetryPlugin.Settings.TestClutch') : $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
 var speed = $prop('SimTelemetryPlugin.SpeedMs') * 3.6;
 var engineRPM = $prop('SimTelemetryPlugin.EngineRPM');
 var transRPM = $prop('SimTelemetryPlugin.TransmissionRPM');

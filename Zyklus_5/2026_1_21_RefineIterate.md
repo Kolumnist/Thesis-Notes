@@ -1,12 +1,12 @@
 # Refine & Iterate
 
-Zyklus drei war zu viel auf einmal und schlecht geplant. Plaung für Zyklus vier wird genauer und länger sein um wirklich am Ziel dranzubleiben.
+Zyklus Vier hat den Fokus auf die Effekte gelegt und dabei konnte ich feststellen, dass die Hardware ausreichend ist. Einen LRA zu testen wäre im Interesse aber nicht notwendig. Das Gesamtsystem(mit Buttshaker und Haptiksitz) zusammen zu testen muss allerdings gemacht werden um sicherzustellen, dass mein System gut mit den anderen Zusammenspielt und nicht schlecht ist. Vibrationsmessungen abzuschließen wäre ebenfalls von Interesse aber nicht notwendig.
 
 ## Ziel
 
 _Das Ziel ist es,_
 
-die Logik zu erweitern sodass, dass Schalten ein eigenes Gefühl erhält und das Anfahren so optimiert ist, dass es bei höherer Drehzahl nicht schwächer wird.
+das Schalten realistischer zu erweitern sodass, mindestens beim langsamen Schalten alle genannten Szenarien realistisch spürbar sind. ... Motor abwürgen und Starten anders... Schalter für Buttshaker vorne am Pedal.
 
 Innerhalb von einer Woche soll die Logik optimiert und die Effekte für alle Szenarien definiert, erstellt und getestet werden.
 
@@ -14,7 +14,7 @@ Anschließend erfolgt eine Review mit fünf Testpersonen mittels des vorhandenen
 
 ## Recherche
 
-Mein vibrotaktiles System + kinästethisches system sind nicht ausreichend geplant. Die Logik muss spezifischer werden und mehr Mensch bezogen definiert sein. Der Fuß spürt Frequenzen zwischen 10Hz und 100Hz gut.
+
 
 ## Konzepte
 

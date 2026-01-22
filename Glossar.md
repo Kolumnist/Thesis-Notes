@@ -5,8 +5,6 @@ Vorlage Markdown einfügen hier pls
 
 Praktische Fahrausbildung - Immer im Bezug auf B197 außer im Text deutlich gekennzeichnet.
 
-
-
 \begin{definition}[Haptik]
     
 \end{definition}

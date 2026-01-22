@@ -24,7 +24,7 @@ Nach 7 Tagen wurde der Zyklus beendet. Es gab keine zusätzlichen Aufgaben
 
 Zwei der Effekte wurden nicht umgesetzt aufgrund fehlender Daten.
 
-Review gezwungen.
+Review musste allerdings verschoben werden. Fokus auf Präsentation.
 
 ### Szenarien definieren
 
@@ -66,11 +66,19 @@ Idee: Schlupf und Drehmoment deutlich stärker spürbar. Schleifpunkt wird nun d
 
 Mit höherer Drehzahl wird die Frequenz höher. Da der Schlupf höher sein sollte wird die Vibration außerdem intensiver.
 
-#### Kurz vor dem Abwürgen, Ruckeln und Grobes Schlagen
+#### Kurz vor dem Abwürgen, Ruckeln und Grobes Schlagen & Schalten unter Last
 
 Die Intensität wird auf das Maximum gebracht und die Frequenz auf ein Minimum. Eine weitere Möglichkeit ist es den DRV2605 auszunutzen aber dann ist es weniger modular nutzbar.
 
-#### 
+Für das Schalten wird auf die Drehzahländerung pro frame geachtet. Wenn die Drehzahländerung pro frame hoch genug ist wird der Effekt aktiv.
+
+#### Zu frühes Hochschalten
+
+Muss im nächsten Zyklus fertiggestellt werden, da ohne Sensordaten des Gaspedals, dass zu frohe Hochschalten physikalisch wenig Sinn macht.
+
+#### Motorbremse
+
+Wenn Schlupfdrehzahl negativ ist, also Motordrehzahl niedriger ist wie Transmission Drehzahl, dann sollte es eine starke kurze Vibration geben.
 
 ### Logik umschreiben
 
@@ -94,4 +102,3 @@ Zweiter Versuch für Schleifpunkt ist schön aber ich brauche eigentlich den Wer
     let bitePointFactor = Math.pow(1.0 - clutchDistanceNormalized, 0.01); // [1 ; 0]
 
 Modularität, Realismus, Gefühl und System
-

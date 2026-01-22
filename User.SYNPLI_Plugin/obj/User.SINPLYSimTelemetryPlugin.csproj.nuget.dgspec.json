@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj": {}
+    "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\Thesis\\Thesis Notes\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj": {}
   },
   "projects": {
-    "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj": {
+    "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\Thesis\\Thesis Notes\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj",
+        "projectUniqueName": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\Thesis\\Thesis Notes\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj",
         "projectName": "User.SYNPLISimTelemetryPlugin",
-        "projectPath": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj",
+        "projectPath": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\Thesis\\Thesis Notes\\User.SYNPLI_Plugin\\User.SINPLYSimTelemetryPlugin.csproj",
         "packagesPath": "C:\\Users\\collin\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\User.SYNPLI_Plugin\\obj\\",
+        "outputPath": "C:\\Users\\collin\\OneDrive - Veigel GmbH + Co KG\\Dokumente\\Thesis\\Thesis Notes\\User.SYNPLI_Plugin\\obj\\",
         "projectStyle": "PackageReference",
         "skipContentFileWrite": true,
         "UsingMicrosoftNETSdk": false,
@@ -45,20 +45,6 @@
               "version": "[13.0.4, )"
             }
           }
-        }
-      },
-      "runtimes": {
-        "win": {
-          "#import": []
-        },
-        "win-arm64": {
-          "#import": []
-        },
-        "win-x64": {
-          "#import": []
-        },
-        "win-x86": {
-          "#import": []
         }
       }
     }

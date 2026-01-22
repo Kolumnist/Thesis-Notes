@@ -12,3 +12,13 @@ Die Bearbeitungszeit der Thesis kann grundsätzlich auf Antrag und mit Genehmigu
 
 Ilias
 etc.
+
+Implementierung vibro-taktilem Feedback an einem Kupplungspedal für Simulation der Kupplungsvibrationen
+
+## Todos today
+
+- LRA "besorgen"
+- Evtl. Messungen vorbereiten
+- ein Kapitel für Thesis schreiben
+
+13:00 Dirk Werner termin
