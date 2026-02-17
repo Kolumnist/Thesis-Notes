@@ -16,7 +16,7 @@ Ein haptisches Force-Feedbacksystem für Sim-Racing Pedale, das den Schleifpunkt
 | Komponente | Modell | Funktion |
 | -------- | ------- | ------- |
 | Audio Verstärker | | Verstärker und Stromquelle für Aktuator |
-| Aktuator | Grewus VCA (Voice Coil Actuator) | Vibriert mithilfe von Audio |
+| Aktuator | Grewus HapForce 2 VCA (Voice Coil Actuator) | Vibriert mithilfe von Audio |
 | Halterung | 3D-Druck | Befestigung am Kupplungspedal |
 | Kupplungspedal | Fanatec V3i Pedals | - |
 
