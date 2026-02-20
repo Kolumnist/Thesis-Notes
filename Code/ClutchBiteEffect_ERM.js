@@ -14,12 +14,14 @@ var amplitudeCalibration = $prop('SimTelemetryPlugin.Settings.AmplitudeCalibrati
 var torqueCalibration = $prop('SimTelemetryPlugin.Settings.TorqueCalibration') || 2;
 
 // INPUTS
-var clutch = $prop('') ? $prop('SimTelemetryPlugin.Settings.TestClutch') : $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
+var clutch = $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
+var throttle = $prop('SimTelemetryPlugin.ThrottlePedalPosition'); // 0.0 bis 1.0
+var brake = $prop('SimTelemetryPlugin.BrakePedalPosition'); // 0.0 bis 1.0
 var speed = $prop('SimTelemetryPlugin.SpeedMs') * 3.6;
 var engineRPM = $prop('SimTelemetryPlugin.EngineRPM');
-var transRPM = $prop('SimTelemetryPlugin.TransmissionRPM');
+var transmissionRPM = $prop('SimTelemetryPlugin.TransmissionRPM');
 var torque = $prop('SimTelemetryPlugin.EngineTorque');
-var gear = $prop('SimTelemetryPlugin.GearInUse'); // we need to calibrate this value somehow or have it defined as currently I do not know what 1 or 2 is.
+var gearInUse = $prop('SimTelemetryPlugin.GearInUse'); // we need to calibrate this value somehow or have it defined as currently I do not know what 1 or 2 is.
 
 var brakeAddition = 0;
 
@@ -36,13 +38,13 @@ var rpmNormalized = Math.min(engineRPM / MAX_ENGINE_RPM, 1);
 
 let bitePointFactor = (clutch >= BITEPOINT_MIN) * (clutch <= BITEPOINT_MAX);
 
-let slipRPM = engineRPM - transRPM;
+let slipRPM = engineRPM - transmissionRPM;
 let slipFactor = Math.pow(Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM+speed)), 0.45);
 
 let torqueNormalized = Math.min(Math.abs(torque) / MAX_TORQUE);
 let torqueFactor = 2 - (1 / (1 + torqueCalibration * torqueNormalized)); //hyperbl 1 - 1.66
 
-let bitePointIntensity = Math.min(bitePointFactor * slipFactor * torqueFactor, 1) * (gear != 1);
+let bitePointIntensity = Math.min(bitePointFactor * slipFactor * torqueFactor, 1) * (gearInUse != 1);
 
 let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized;
 
@@ -60,7 +62,7 @@ if(root["shockTimer"] > 0) {
     amplitude = 100;
     frequency = 5;
     root["shockTimer"]--;
-} else if (slipRPM < -100 && clutch < BITEPOINT_MAX) {
+} else if (slipRPM < -1 && clutch < BITEPOINT_MAX) {
     // Engine Braking
     amplitude = slipFactor*100;
     frequency = 30 + (rpmNormalized * FREQUENCY_MODULATION);
