@@ -45,36 +45,33 @@ let gear_f = gearInUse == GEAR_N ? 0 : 1;
 
 let amplitude = Math.min(slip_f * torque_f * bitePoint_f * gear_f, 1) * MAX_AMPLITUDE;
 
-// Note: Add Brake stuff Engine RPM Drop
-// Note: Add Shift Early:
-/* else if (gear > 2 && engineRPM < 1200 && throttle > 0.8 && clutch < 0.2) {
-    // Shifting too early
-    amplitude = 100;
-    frequency = 7;
-} */
-
-
 let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized;
 
+// Note: Add Brake stuff Engine RPM Drop
+// Note: Add Shift Early:
+
+if (gear > 2 && speed < 20 && throttle > 0.5 && clutch < 0.2) {
+    // Shifting too early
+    amplitude = amplitude;
+    frequency = DRIVETRAIN_FREQUENCY;
+} else if (slipRPM < -10 && clutch < BITEPOINT_MAX) {
+    // Engine Braking
+    amplitude *= Math.min(slip_f * torque_f * gear_f, 1);
+    frequency = DRIVETRAIN_FREQUENCY;
+}
 
 // Shifting and Stall:
 
 let slipDelta = Math.abs(slipRPM - root["lastSlip"]);
-if (slipDelta > 700 || (engineRPM <= 600 && slipDelta > 100)) {
+root["lastSlip"] = slipRPM;
+if (slipDelta > 1000) {
     root["shockTimer"] = 5;
 }
-
 if(root["shockTimer"] > 0) {
     // Shift Shock OR Stall Shock
-    amplitude = 100;
-    frequency = 5;
+    amplitude = MAX_AMPLITUDE;
+    frequency = DRIVETRAIN_FREQUENCY;
     root["shockTimer"]--;
-} else if (slipRPM < -100 && clutch < BITEPOINT_MAX) {
-    // Engine Braking
-    amplitude = slipFactor*100;
-    frequency = 30 + (rpmNormalized * FREQUENCY_MODULATION);
 }
-
-root["lastSlip"] = slipRPM;
 
 return Math.round(frequency) + ";" + Math.round(amplitude) + "\n";
