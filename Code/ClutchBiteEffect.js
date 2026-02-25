@@ -1,6 +1,5 @@
 if(root["shiftShockTimer"] == null) root["shiftShockTimer"] = 0;
 if(root["lastSlip"] == null) root["lastSlip"] = 0;
-if(root["previousGear"] == null) root["previousGear"] = 0;
 
 // CAR CALIBRATION
 var BITEPOINT_MAX = $prop('SimTelemetryPlugin.CarCalibration.BITEPOINT_MAX') || 0.875;
@@ -36,10 +35,8 @@ let engineRPM_n = Math.min(engineRPM / MAX_ENGINE_RPM, 1);
 let slipRPM_n = Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM), 1); //+speed
 let torque_n = Math.min(Math.abs(torque) / MAX_TORQUE, 1);
 
-//let torqueFactor = 2 - (1 / (1 + torqueCalibration * torqueNormalized)); //hyperbl 1 - 1.66
-
-let slip_f = Math.pow(slipRPM_n, 0.8);
-let torque_f = Math.pow(torque_n, 0.8);
+let slip_f = Math.pow(slipRPM_n, 1);
+let torque_f = Math.pow(torque_n, 1);
 let bitePoint_f = (clutch >= BITEPOINT_MIN) * (clutch <= BITEPOINT_MAX);
 let gear_f = gearInUse == GEAR_N ? 0 : 1;
 
@@ -49,10 +46,13 @@ let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized;
 
 // Note: Add Brake stuff Engine RPM Drop
 // Note: Add Shift Early:
+let lugging = gearInUse >= GEAR_N+2 && speed < 20 && throttle > 0.5 && clutch < BITEPOINT_MIN;
+let motorBrake = slipRPM < -10 && clutch < BITEPOINT_MAX;
 
-if (gear > 2 && speed < 20 && throttle > 0.5 && clutch < 0.2) {
+if (lugging) 
+{
     // Shifting too early
-    amplitude = amplitude;
+    amplitude = Math.min(Math.abs(slip_f-1) * torque_f * gear_f, 1) * MAX_AMPLITUDE;
     frequency = DRIVETRAIN_FREQUENCY;
 } else if (slipRPM < -10 && clutch < BITEPOINT_MAX) {
     // Engine Braking
@@ -64,12 +64,18 @@ if (gear > 2 && speed < 20 && throttle > 0.5 && clutch < 0.2) {
 
 let slipDelta = Math.abs(slipRPM - root["lastSlip"]);
 root["lastSlip"] = slipRPM;
-if (slipDelta > 1000) {
+if (slipDelta > 1500) 
+    {
     root["shockTimer"] = 5;
+} else if (motorBrake)
+{
+    root["shockTimer"] = slipRPM_n*5
 }
+
+
 if(root["shockTimer"] > 0) {
     // Shift Shock OR Stall Shock
-    amplitude = MAX_AMPLITUDE;
+    amplitude = Math.min(Math.abs(slip_f-1) * torque_f * gear_f, 1) * MAX_AMPLITUDE;
     frequency = DRIVETRAIN_FREQUENCY;
     root["shockTimer"]--;
 }
