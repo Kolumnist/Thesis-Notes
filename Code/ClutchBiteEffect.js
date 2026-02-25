@@ -29,7 +29,33 @@ var engineRunning = $prop('SimTelemetryPlugin.EngineRunning');
 var brakeAddition = 0;
 
 // ---
-let slipRPM = engineRPM - transmissionRPM;
+switch(gearInUse){
+    case 0:
+        transmissionRPM *= 7;
+        break;
+    case 1:
+        break;
+    case 2:
+        transmissionRPM *= 7;
+        break;
+    case 3:
+        transmissionRPM *= 4;
+        break;
+    case 4:
+        transmissionRPM *= 2;
+        break;
+    case 5:
+        transmissionRPM *= 1.6;
+        break;
+    case 6:
+        transmissionRPM *= 1.2;
+        break;
+    case 7:
+        transmissionRPM *= 0.9;
+        break;
+}
+
+let slipRPM = engineRPM - transmissionRPM; // => Höherer Gang = transmissionRPM höher;
 
 let engineRPM_n = Math.min(engineRPM / MAX_ENGINE_RPM, 1);
 let slipRPM_n = Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM), 1); //+speed
