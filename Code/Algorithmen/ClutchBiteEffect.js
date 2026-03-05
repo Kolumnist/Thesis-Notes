@@ -4,32 +4,32 @@ if(root["lastSlip"] == null) root["lastSlip"] = 0;
 // CAR CALIBRATION
 var BITEPOINT_MAX = $prop('SimTelemetryPlugin.CarCalibration.BITEPOINT_MAX') || 0.875;
 var BITEPOINT_MIN = $prop('SimTelemetryPlugin.CarCalibration.BITEPOINT_MIN') || 0.5;
-var MAX_TORQUE = $prop('SimTelemetryPlugin.CarCalibration.MAX_TORQUE') || 250;
-var MAX_ENGINE_RPM = $prop('SimTelemetryPlugin.CarCalibration.MAX_ENGINE_RPM') || 5000;
-var MAX_SLIP_RPM = $prop('SimTelemetryPlugin.CarCalibration.MAX_SLIP_RPM') || 2000;
+var TORQUE_MAX = $prop('SimTelemetryPlugin.CarCalibration.TORQUE_MAX') || 250;
+var ENGINE_RPM_MAX = $prop('SimTelemetryPlugin.CarCalibration.ENGINE_RPM_MAX') || 5000;
+var SLIP_RPM_MAX = $prop('SimTelemetryPlugin.CarCalibration.SLIP_RPM_MAX') || 2000;
 var GEAR_N = $prop('SimTelemetryPlugin.CarCalibration.GEAR_N') || 1;
 
-// ACTUATOR & MORE CALIBRATION
-var DRIVETRAIN_FREQUENCY = $prop('SimTelemetryPlugin.Settings.FreqBase') || 8;
-var FREQUENCY_MODULATION = $prop('SimTelemetryPlugin.Settings.FreqMod') || 30;
-var amplitudeCalibration = $prop('SimTelemetryPlugin.Settings.AmplitudeCalibration') || 1;
+// MOTOR & MORE CALIBRATION
+var FREQUENCY_MIN = $prop('SimTelemetryPlugin.Settings.FreqBase') || 8;
+var FREQUENCY_MAX = $prop('SimTelemetryPlugin.Settings.FreqMod') || 30;
+var AMPLITUDE_MAX = $prop('SimTelemetryPlugin.Settings.AMPLITUDE_MAX') || 1;
 var torqueCalibration = $prop('SimTelemetryPlugin.Settings.TorqueCalibration') || 2;
+var slipCalibration = $prop('SimTelemetryPlugin.Settings.SlipCalibration') || 2;
 
 // INPUTS
-var speed = $prop('SimTelemetryPlugin.SpeedMs') * 3.6;
+var speed = $prop('SimTelemetryPlugin.SpeedKmh');
 var engineRPM = $prop('SimTelemetryPlugin.EngineRPM');
 var transmissionRPM = $prop('SimTelemetryPlugin.TransmissionRPM');
-var gearInUse = $prop('SimTelemetryPlugin.GearInUse');
+var transmissionGear = $prop('SimTelemetryPlugin.TransmissionGear');
 var torque = $prop('SimTelemetryPlugin.EngineTorque');
-var clutch = $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
-var throttle = $prop('SimTelemetryPlugin.ThrottlePedalPosition'); // 0.0 bis 1.0
-var brake = $prop('SimTelemetryPlugin.BrakePedalPosition'); // 0.0 bis 1.0
+var clutchPedalPosition = $prop('SimTelemetryPlugin.ClutchPedalPosition'); // 0.0 bis 1.0
+var throttlePedalPosition = $prop('SimTelemetryPlugin.ThrottlePedalPosition'); // 0.0 bis 1.0
 var engineRunning = $prop('SimTelemetryPlugin.EngineRunning');
 
 var brakeAddition = 0;
 
 // ---
-switch(gearInUse){
+switch(transmissionGear){
     case 0:
         transmissionRPM *= 7;
         break;
@@ -57,33 +57,36 @@ switch(gearInUse){
 
 let slipRPM = engineRPM - transmissionRPM; // => Höherer Gang = transmissionRPM höher;
 
-let engineRPM_n = Math.min(engineRPM / MAX_ENGINE_RPM, 1);
-let slipRPM_n = Math.min(Math.abs(slipRPM) / (MAX_SLIP_RPM), 1); //+speed
-let torque_n = Math.min(Math.abs(torque) / MAX_TORQUE, 1);
+let engineRPM_n = Math.min(engineRPM / ENGINE_RPM_MAX, 1);
+let slipRPM_n = Math.min(Math.abs(slipRPM) / (SLIP_RPM_MAX), 1); //+speed
+let torque_n = Math.min(Math.abs(torque) / TORQUE_MAX, 1);
 
 let slip_f = Math.pow(slipRPM_n, 1);
 let torque_f = Math.pow(torque_n, 1);
-let bitePoint_f = (clutch >= BITEPOINT_MIN) * (clutch <= BITEPOINT_MAX);
-let gear_f = gearInUse == GEAR_N ? 0 : 1;
+let bitePoint_f = (clutchPedalPosition >= BITEPOINT_MIN) * (clutchPedalPosition <= BITEPOINT_MAX);
+let gear_f = transmissionGear == GEAR_N ? 0 : 1;
+
+
+let amplitudePlus = Math.min((slip_f + torque_f) * bitePoint_f * gear_f, 1) * MAX_AMPLITUDE;
 
 let amplitude = Math.min(slip_f * torque_f * bitePoint_f * gear_f, 1) * MAX_AMPLITUDE;
 
-let frequency = DRIVETRAIN_FREQUENCY + FREQUENCY_MODULATION * rpmNormalized;
+let frequency = FREQUENCY_MIN + (FREQUENCY_MAX - FREQUENCY_MIN) * rpmNormalized;
 
 // Note: Add Brake stuff Engine RPM Drop
 // Note: Add Shift Early:
-let lugging = gearInUse >= GEAR_N+2 && speed < 20 && throttle > 0.5 && clutch < BITEPOINT_MIN;
-let motorBrake = slipRPM < -10 && clutch < BITEPOINT_MAX;
+let lugging = transmissionGear >= GEAR_N+2 && speed < 20 && throttlePedalPosition > 0.5 && clutchPedalPosition < BITEPOINT_MIN;
+let motorBrake = slipRPM < -10 && clutchPedalPosition < BITEPOINT_MAX;
 
 if (lugging) 
 {
     // Shifting too early
     amplitude = Math.min(Math.abs(slip_f-1) * torque_f * gear_f, 1) * MAX_AMPLITUDE;
-    frequency = DRIVETRAIN_FREQUENCY;
-} else if (slipRPM < -10 && clutch < BITEPOINT_MAX) {
+    frequency = FREQUENCY_MIN;
+} else if (slipRPM < -10 && clutchPedalPosition < BITEPOINT_MAX) {
     // Engine Braking
     amplitude *= Math.min(slip_f * torque_f * gear_f, 1);
-    frequency = DRIVETRAIN_FREQUENCY;
+    frequency = FREQUENCY_MIN;
 }
 
 // Shifting and Stall:
@@ -102,7 +105,7 @@ if (slipDelta > 1500)
 if(root["shockTimer"] > 0) {
     // Shift Shock OR Stall Shock
     amplitude = Math.min(Math.abs(slip_f-1) * torque_f * gear_f, 1) * MAX_AMPLITUDE;
-    frequency = DRIVETRAIN_FREQUENCY;
+    frequency = FREQUENCY_MIN;
     root["shockTimer"]--;
 }
 
